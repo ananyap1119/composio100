@@ -121,6 +121,8 @@ const apps=JSON.parse(data.textContent), selected=new Set(JSON.parse(localStorag
     html = html.replace(old_cells, new_cells)
     html = html.replace('${label(r.human_verified_scoped_verdict||r.buildability_verdict)} · ${label(r.confidence)}', '${r.human_verified?`Manual audit result: ${r.human_verified_scoped_verdict}`:`Agent result: ${label(r.buildability_verdict)}`} · ${label(r.confidence)}<br>${r.human_verified?`Original agent result: ${label(r.buildability_verdict)}`:``}')
     html = html.replace('</style>', '.path{display:block;max-width:190px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}tbody tr{height:72px}thead th{position:sticky;top:57px;background:var(--bg);z-index:3}</style>')
+    html = html.replace('thead th{position:sticky;top:57px;background:var(--bg);z-index:3}', 'thead th{position:static;background:var(--bg);z-index:auto}')
+    html = html.replace('${r.human_verified?\'<span class="badge good">Manually audited</span>\':\'\'}', '')
     html = html.replace('</script></body>', "const sectionObserver=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));}}),{rootMargin:'-30% 0px -60%'});document.querySelectorAll('main section[id]').forEach(s=>sectionObserver.observe(s));document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer()});</script></body>")
     generated_at = datetime.now(UTC).isoformat()
     html = html.replace("</main>", f"<footer class='mono' style='max-width:1240px;margin:0 auto;padding:24px 5vw'>Generated at {generated_at} · dataset presentation only</footer></main>")
