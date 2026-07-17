@@ -1,0 +1,729 @@
+{
+  "audit_status": "first_pass_manual_audit",
+  "sampled_apps": [
+    "Salesforce",
+    "HubSpot",
+    "Apify",
+    "Close",
+    "Jira",
+    "Otter AI",
+    "Linear",
+    "Front",
+    "Shopify",
+    "Zoho CRM"
+  ],
+  "total_sampled_apps": 10,
+  "total_audited_claims": 50,
+  "supported_claims": 23,
+  "incorrect_claims": 3,
+  "missed_evidence_claims": 23,
+  "correctly_uncertain_claims": 1,
+  "incomplete_audit_claims": 0,
+  "metrics": {
+    "concrete_claim_precision": 0.8846153846153846,
+    "evidence_coverage": 0.98,
+    "overall_audit_correctness": 0.48,
+    "verdict_accuracy": 0.4
+  },
+  "by_app": {
+    "Salesforce": {
+      "claims": 5,
+      "supported": 5,
+      "correct": 5,
+      "accuracy": 1.0
+    },
+    "HubSpot": {
+      "claims": 5,
+      "supported": 4,
+      "correct": 4,
+      "accuracy": 0.8
+    },
+    "Apify": {
+      "claims": 5,
+      "supported": 5,
+      "correct": 5,
+      "accuracy": 1.0
+    },
+    "Close": {
+      "claims": 5,
+      "supported": 1,
+      "correct": 1,
+      "accuracy": 0.2
+    },
+    "Jira": {
+      "claims": 5,
+      "supported": 1,
+      "correct": 1,
+      "accuracy": 0.2
+    },
+    "Otter AI": {
+      "claims": 5,
+      "supported": 1,
+      "correct": 2,
+      "accuracy": 0.4
+    },
+    "Linear": {
+      "claims": 5,
+      "supported": 0,
+      "correct": 0,
+      "accuracy": 0.0
+    },
+    "Front": {
+      "claims": 5,
+      "supported": 1,
+      "correct": 1,
+      "accuracy": 0.2
+    },
+    "Shopify": {
+      "claims": 5,
+      "supported": 4,
+      "correct": 4,
+      "accuracy": 0.8
+    },
+    "Zoho CRM": {
+      "claims": 5,
+      "supported": 1,
+      "correct": 1,
+      "accuracy": 0.2
+    }
+  },
+  "by_field": {
+    "api_breadth": {
+      "claims": 12,
+      "supported": 5,
+      "incorrect": 0,
+      "missed_evidence": 7,
+      "correctly_uncertain": 0
+    },
+    "authentication": {
+      "claims": 9,
+      "supported": 3,
+      "incorrect": 1,
+      "missed_evidence": 5,
+      "correctly_uncertain": 0
+    },
+    "buildability_verdict": {
+      "claims": 10,
+      "supported": 4,
+      "incorrect": 0,
+      "missed_evidence": 5,
+      "correctly_uncertain": 1
+    },
+    "documented_api": {
+      "claims": 4,
+      "supported": 3,
+      "incorrect": 0,
+      "missed_evidence": 1,
+      "correctly_uncertain": 0
+    },
+    "existing_customer_admin_access": {
+      "claims": 5,
+      "supported": 2,
+      "incorrect": 1,
+      "missed_evidence": 2,
+      "correctly_uncertain": 0
+    },
+    "independent_developer_access": {
+      "claims": 7,
+      "supported": 3,
+      "incorrect": 1,
+      "missed_evidence": 3,
+      "correctly_uncertain": 0
+    },
+    "mcp_status": {
+      "claims": 2,
+      "supported": 2,
+      "incorrect": 0,
+      "missed_evidence": 0,
+      "correctly_uncertain": 0
+    },
+    "multi_tenant_partner_access": {
+      "claims": 1,
+      "supported": 1,
+      "incorrect": 0,
+      "missed_evidence": 0,
+      "correctly_uncertain": 0
+    }
+  },
+  "by_confidence": {
+    "medium": {
+      "claims": 10,
+      "correct": 9,
+      "accuracy": 0.9
+    },
+    "high": {
+      "claims": 5,
+      "correct": 5,
+      "accuracy": 1.0
+    },
+    "low": {
+      "claims": 35,
+      "correct": 10,
+      "accuracy": 0.2857142857142857
+    }
+  },
+  "finalized_vs_review_required": {
+    "evidence-finalized": {
+      "claims": 15,
+      "correct": 14,
+      "accuracy": 0.9333333333333333
+    },
+    "review-required": {
+      "claims": 35,
+      "correct": 10,
+      "accuracy": 0.2857142857142857
+    }
+  },
+  "claims": [
+    {
+      "app": "Salesforce",
+      "claim_number": 1,
+      "field": "authentication",
+      "original_agent_value": "OAuth 2.0 authentication",
+      "outcome": "supported",
+      "corrected_value": "Salesforce REST integrations support OAuth 2.0 through connected or external client apps.",
+      "official_source_url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_oauth_and_connected_apps.htm",
+      "explanation": "Salesforceâ€™s REST documentation explicitly requires an OAuth-enabled connected or external client app for OAuth flows.",
+      "failure_category": null
+    },
+    {
+      "app": "Salesforce",
+      "claim_number": 2,
+      "field": "independent_developer_access",
+      "original_agent_value": "Self-serve developer access and credential creation",
+      "outcome": "supported",
+      "corrected_value": "A developer can register a free Developer Edition org and create an app that generates client credentials.",
+      "official_source_url": "https://developer.salesforce.com/docs/platform/mobile-sdk/guide/connected-apps-howto.html",
+      "explanation": "Salesforce documents both self-service Developer Edition registration and app creation through Setup and App Manager.",
+      "failure_category": null
+    },
+    {
+      "app": "Salesforce",
+      "claim_number": 3,
+      "field": "documented_api",
+      "original_agent_value": "Broad REST read and write coverage",
+      "outcome": "supported",
+      "corrected_value": "The REST API supports retrieving, creating, updating and deleting Salesforce records, alongside composite and other advanced resources.",
+      "official_source_url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/resources_list.htm",
+      "explanation": "Official REST resources document record retrieval, updates, deletion and broader composite operations.",
+      "failure_category": null
+    },
+    {
+      "app": "Salesforce",
+      "claim_number": 4,
+      "field": "mcp_status",
+      "original_agent_value": "Official Salesforce MCP",
+      "outcome": "supported",
+      "corrected_value": "Salesforce publishes and hosts official MCP servers with OAuth and Salesforce object operations.",
+      "official_source_url": "https://developer.salesforce.com/docs/platform/hosted-mcp-servers/guide/hosted-mcp-servers-overview.html",
+      "explanation": "Salesforceâ€™s developer site identifies them as Salesforce Hosted MCP Servers and documents read, create, update and delete tools.",
+      "failure_category": null
+    },
+    {
+      "app": "Salesforce",
+      "claim_number": 5,
+      "field": "buildability_verdict",
+      "original_agent_value": "Build now",
+      "outcome": "supported",
+      "corrected_value": "Build now, but customer organizations may require an administrator to pre-authorize the app or assigned users.",
+      "official_source_url": "https://help.salesforce.com/s/articleView?id=sf.connected_app_manage_oauth.htm&type=5",
+      "explanation": "Developer-side app creation is self-serve, while customer-side OAuth access remains subject to each organizationâ€™s connected-app policies.",
+      "failure_category": null
+    },
+    {
+      "app": "HubSpot",
+      "claim_number": 1,
+      "field": "api_breadth",
+      "original_agent_value": "OAuth 2.0",
+      "outcome": "supported",
+      "corrected_value": "OAuth is required when an app is installed across multiple HubSpot accounts.",
+      "official_source_url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview",
+      "explanation": "HubSpot explicitly requires OAuth for multi-account app distribution and issues bearer access tokens after installation.",
+      "failure_category": null
+    },
+    {
+      "app": "HubSpot",
+      "claim_number": 2,
+      "field": "authentication",
+      "original_agent_value": "OAuth/API-key authentication paths",
+      "outcome": "incorrect",
+      "corrected_value": "The relevant current terms are OAuth access token and static or private-app access token, not API key.",
+      "official_source_url": "https://developers.hubspot.com/docs/apps/legacy-apps/private-apps/overview",
+      "explanation": "HubSpot calls the single-account credential a private-app access token, while â€œdeveloper API keysâ€ are a separate developer-tooling concept rather than CRM API authentication.",
+      "failure_category": "incorrect terminology"
+    },
+    {
+      "app": "HubSpot",
+      "claim_number": 3,
+      "field": "independent_developer_access",
+      "original_agent_value": "Self-serve developer account, app creation and multi-customer installation",
+      "outcome": "supported",
+      "corrected_value": "Developers can create apps and test accounts themselves, with OAuth used for installations across customer accounts.",
+      "official_source_url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/create-an-app",
+      "explanation": "HubSpot documents app creation, developer test accounts, OAuth credentials and multi-account distribution without requiring vendor contact.",
+      "failure_category": null
+    },
+    {
+      "app": "HubSpot",
+      "claim_number": 4,
+      "field": "documented_api",
+      "original_agent_value": "Broad CRM read and write API",
+      "outcome": "supported",
+      "corrected_value": "HubSpotâ€™s REST APIs are accessible through private-app access tokens or public-app OAuth tokens, subject to selected scopes.",
+      "official_source_url": "https://developers.hubspot.com/docs/apps/developer-platform/overview",
+      "explanation": "HubSpot states that all REST APIs are available through the supported private and public authentication paths.",
+      "failure_category": null
+    },
+    {
+      "app": "HubSpot",
+      "claim_number": 5,
+      "field": "buildability_verdict",
+      "original_agent_value": "Build now",
+      "outcome": "supported",
+      "corrected_value": "Build now with OAuth for multiple customers or a private/static access token for a single account.",
+      "official_source_url": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/authentication/overview",
+      "explanation": "Both single-account and multi-account build paths are officially documented and self-service.",
+      "failure_category": null
+    },
+    {
+      "app": "Apify",
+      "claim_number": 1,
+      "field": "authentication",
+      "original_agent_value": "API-token authentication",
+      "outcome": "supported",
+      "corrected_value": "Apify authenticates API requests with an API token supplied as a bearer token or URL parameter.",
+      "official_source_url": "https://docs.apify.com/api/v2",
+      "explanation": "The API reference directly documents tokens from the Apify Console and bearer-token authentication.",
+      "failure_category": null
+    },
+    {
+      "app": "Apify",
+      "claim_number": 2,
+      "field": "independent_developer_access",
+      "original_agent_value": "Free or trial self-serve credential creation",
+      "outcome": "supported",
+      "corrected_value": "Developers can create a free account without a credit card and immediately obtain an API token.",
+      "official_source_url": "https://docs.apify.com/platform/integrations/agent-onboarding",
+      "explanation": "Apifyâ€™s onboarding documentation says the free plan needs no credit card and directs users to the self-service token page.",
+      "failure_category": null
+    },
+    {
+      "app": "Apify",
+      "claim_number": 3,
+      "field": "documented_api",
+      "original_agent_value": "REST API availability",
+      "outcome": "supported",
+      "corrected_value": "Apify provides a versioned public REST API.",
+      "official_source_url": "https://docs.apify.com/api/v2",
+      "explanation": "The official V2 reference documents HTTP endpoints, authentication, request bodies and resource responses.",
+      "failure_category": null
+    },
+    {
+      "app": "Apify",
+      "claim_number": 4,
+      "field": "api_breadth",
+      "original_agent_value": "Read/write coverage across Actors, runs, datasets and storage",
+      "outcome": "supported",
+      "corrected_value": "The API can start Actors, inspect runs, retrieve datasets and programmatically access or modify storage resources.",
+      "official_source_url": "https://docs.apify.com/api/v2",
+      "explanation": "Apify documents POST-based Actor execution and programmatic access to datasets, key-value stores and other storage.",
+      "failure_category": null
+    },
+    {
+      "app": "Apify",
+      "claim_number": 5,
+      "field": "buildability_verdict",
+      "original_agent_value": "Build now",
+      "outcome": "supported",
+      "corrected_value": "Build now using a self-generated API token.",
+      "official_source_url": "https://docs.apify.com/platform/integrations/agent-onboarding",
+      "explanation": "Account creation, token generation and usable API endpoints are all publicly documented without an approval process.",
+      "failure_category": null
+    },
+    {
+      "app": "Close",
+      "claim_number": 1,
+      "field": "authentication",
+      "original_agent_value": "Authentication methods unresolved",
+      "outcome": "missed_evidence",
+      "corrected_value": "Close supports API-key authentication and OAuth 2.0.",
+      "official_source_url": "https://developer.close.com/api/overview/oauth-authentication",
+      "explanation": "Close has separate official documentation for user-generated API keys and OAuth client credentials.",
+      "failure_category": "insufficient source retrieval"
+    },
+    {
+      "app": "Close",
+      "claim_number": 2,
+      "field": "independent_developer_access",
+      "original_agent_value": "Credential access unresolved",
+      "outcome": "missed_evidence",
+      "corrected_value": "Existing Close users can self-create API keys and OAuth apps; non-users can request a free development organization from Close.",
+      "official_source_url": "https://developer.close.com/integrations",
+      "explanation": "The integration guide explicitly describes both self-service credentials for users and the support-request path for non-user development organizations.",
+      "failure_category": "credential-path confusion"
+    },
+    {
+      "app": "Close",
+      "claim_number": 3,
+      "field": "api_breadth",
+      "original_agent_value": "Broad read/write API evidence",
+      "outcome": "supported",
+      "corrected_value": "Close exposes a broad REST API covering CRM records, activities, users, organizations and related resources with read and write operations.",
+      "official_source_url": "https://developer.close.com/api/overview",
+      "explanation": "The official API reference and integration guide describe broad programmatic read and write access.",
+      "failure_category": null
+    },
+    {
+      "app": "Close",
+      "claim_number": 4,
+      "field": "independent_developer_access",
+      "original_agent_value": "Multi-customer credential distribution unresolved",
+      "outcome": "missed_evidence",
+      "corrected_value": "OAuth apps start private, and Close must make the app public before unrelated Close customers can authorize it.",
+      "official_source_url": "https://developer.close.com/integrations/create-an-oauth-app",
+      "explanation": "Close explicitly instructs developers to request public status when they want other customers to authorize an OAuth app.",
+      "failure_category": "custom-app versus public-distribution confusion"
+    },
+    {
+      "app": "Close",
+      "claim_number": 5,
+      "field": "buildability_verdict",
+      "original_agent_value": "Review-required verdict",
+      "outcome": "missed_evidence",
+      "corrected_value": "Build now for a specific customer using its API key; build after Close public-app approval for multi-customer OAuth distribution.",
+      "official_source_url": "https://developer.close.com/integrations/create-an-oauth-app",
+      "explanation": "The official documentation resolves both the private customer-specific path and the approval-dependent public distribution path.",
+      "failure_category": "custom-app versus public-distribution confusion"
+    },
+    {
+      "app": "Jira",
+      "claim_number": 1,
+      "field": "authentication",
+      "original_agent_value": "Authentication evidence reduced to a workspace-admin credential requirement",
+      "outcome": "missed_evidence",
+      "corrected_value": "Jira Cloud supports OAuth 2.0 3LO and user-generated API tokens; Forge and Connect provide additional app authentication models.",
+      "official_source_url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/",
+      "explanation": "Atlassian documents API-token basic authentication for scripts and OAuth 2.0 3LO for distributed integrations.",
+      "failure_category": "developer versus customer access confusion"
+    },
+    {
+      "app": "Jira",
+      "claim_number": 2,
+      "field": "independent_developer_access",
+      "original_agent_value": "A workspace administrator must create the integration credentials",
+      "outcome": "incorrect",
+      "corrected_value": "Developers independently create an OAuth app, client ID and secret in Atlassianâ€™s developer console.",
+      "official_source_url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+      "explanation": "App creation and sharing are handled by the developer, not by an administrator in every customer workspace.",
+      "failure_category": "developer versus customer access confusion"
+    },
+    {
+      "app": "Jira",
+      "claim_number": 3,
+      "field": "existing_customer_admin_access",
+      "original_agent_value": "Customer workspace-admin approval is required",
+      "outcome": "supported",
+      "corrected_value": "A Jira site administrator must authorize a third-party or OAuth app before it can access that siteâ€™s user data.",
+      "official_source_url": "https://support.atlassian.com/atlassian-cloud/kb/your-site-admin-must-authorize-this-app-error-in-atlassian-cloud-apps/",
+      "explanation": "Atlassian distinguishes developer-side app creation from site-admin authorization inside the customerâ€™s cloud site.",
+      "failure_category": null
+    },
+    {
+      "app": "Jira",
+      "claim_number": 4,
+      "field": "existing_customer_admin_access",
+      "original_agent_value": "REST read/write breadth unresolved",
+      "outcome": "missed_evidence",
+      "corrected_value": "Jiraâ€™s REST APIs and OAuth scopes cover reading, creating, editing and administering Jira data.",
+      "official_source_url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+      "explanation": "The OAuth documentation enumerates read, write and manage scopes intended for Jira REST endpoints.",
+      "failure_category": "credential-path confusion"
+    },
+    {
+      "app": "Jira",
+      "claim_number": 5,
+      "field": "buildability_verdict",
+      "original_agent_value": "Review-required toolkit verdict",
+      "outcome": "missed_evidence",
+      "corrected_value": "Build now with a distributable OAuth 3LO app, while expecting customer site-admin authorization and an unreviewed-app warning until Atlassian review.",
+      "official_source_url": "https://developer.atlassian.com/cloud/jira/platform/oauth-2-3lo-apps/",
+      "explanation": "Developers can enable sharing and distribute an authorization URL before Marketplace listing, although customer authorization and review warnings remain.",
+      "failure_category": "custom-app versus public-distribution confusion"
+    },
+    {
+      "app": "Otter AI",
+      "claim_number": 1,
+      "field": "authentication",
+      "original_agent_value": "Public API and authentication evidence unresolved",
+      "outcome": "missed_evidence",
+      "corrected_value": "Otter publishes a documented API authenticated with user-created bearer API keys.",
+      "official_source_url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+      "explanation": "Otterâ€™s April 23, 2026 documentation describes API-key creation, bearer authentication, rate limits and endpoint definitions.",
+      "failure_category": "custom-app versus public-distribution confusion"
+    },
+    {
+      "app": "Otter AI",
+      "claim_number": 2,
+      "field": "existing_customer_admin_access",
+      "original_agent_value": "Contact-vendor/Enterprise-gated access",
+      "outcome": "supported",
+      "corrected_value": "The API is available to Enterprise workspaces, and customers are told to contact their account manager when it is not enabled.",
+      "official_source_url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+      "explanation": "Otter directly identifies Enterprise workspace access and the account-manager enablement path.",
+      "failure_category": null
+    },
+    {
+      "app": "Otter AI",
+      "claim_number": 3,
+      "field": "existing_customer_admin_access",
+      "original_agent_value": "Workspace-admin access is required for the integration generally",
+      "outcome": "incorrect",
+      "corrected_value": "Ordinary Enterprise users can create personal API keys, while Super Admin status is required only for the separate administration endpoints.",
+      "official_source_url": "https://help.otter.ai/hc/en-us/articles/39661865499799-Super-Admin-specific-APIs",
+      "explanation": "Otter separates authenticated user API access from endpoints specifically reserved for workspace Super Admins.",
+      "failure_category": "developer versus customer access confusion"
+    },
+    {
+      "app": "Otter AI",
+      "claim_number": 4,
+      "field": "api_breadth",
+      "original_agent_value": "Read and write capability unresolved",
+      "outcome": "missed_evidence",
+      "corrected_value": "The API provides broad retrieval of conversations, transcripts, audio and related data, plus a limited write endpoint for creating a conversation from a file.",
+      "official_source_url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+      "explanation": "Official endpoint documentation lists extensive GET operations and POST /conversations, but no broad update/delete CRM-style surface.",
+      "failure_category": "insufficient source retrieval"
+    },
+    {
+      "app": "Otter AI",
+      "claim_number": 5,
+      "field": "buildability_verdict",
+      "original_agent_value": "Gated buildability verdict",
+      "outcome": "correctly_uncertain",
+      "corrected_value": "Build with an Enterprise customerâ€™s API key is justified, but official public documentation does not explain a general third-party, multi-customer OAuth or app-distribution process.",
+      "official_source_url": "https://help.otter.ai/hc/en-us/articles/36130822688279-Otter-ai-Public-API",
+      "explanation": "The documented API resolves Enterprise customer access but does not establish an independently distributable public integration credential path.",
+      "failure_category": "correctly escalated uncertainty"
+    },
+    {
+      "app": "Linear",
+      "claim_number": 1,
+      "field": "api_breadth",
+      "original_agent_value": "OAuth support incomplete",
+      "outcome": "missed_evidence",
+      "corrected_value": "Linear supports OAuth 2.0 and allows developers to create OAuth applications.",
+      "official_source_url": "https://linear.app/developers/oauth-2-0-authentication",
+      "explanation": "Linearâ€™s OAuth guide documents application creation, authorization-code flow and access scopes.",
+      "failure_category": "insufficient source retrieval"
+    },
+    {
+      "app": "Linear",
+      "claim_number": 2,
+      "field": "authentication",
+      "original_agent_value": "Personal API-token support incomplete",
+      "outcome": "missed_evidence",
+      "corrected_value": "Linear supports self-generated personal API keys.",
+      "official_source_url": "https://linear.app/developers/graphql",
+      "explanation": "Linearâ€™s GraphQL documentation directly describes creating and using personal API keys.",
+      "failure_category": "insufficient source retrieval"
+    },
+    {
+      "app": "Linear",
+      "claim_number": 3,
+      "field": "documented_api",
+      "original_agent_value": "Public API evidence incomplete",
+      "outcome": "missed_evidence",
+      "corrected_value": "Linear exposes a public GraphQL API.",
+      "official_source_url": "https://linear.app/developers/graphql",
+      "explanation": "The official developer site identifies GraphQL as Linearâ€™s public API and documents its endpoint and schema.",
+      "failure_category": "custom-app versus public-distribution confusion"
+    },
+    {
+      "app": "Linear",
+      "claim_number": 4,
+      "field": "api_breadth",
+      "original_agent_value": "Read and write operations unresolved",
+      "outcome": "missed_evidence",
+      "corrected_value": "GraphQL queries read data and mutations create or modify Linear entities.",
+      "official_source_url": "https://linear.app/developers/graphql",
+      "explanation": "Linear explicitly documents queries and mutations, while its API overview says the API can mutate supported entities.",
+      "failure_category": "insufficient source retrieval"
+    },
+    {
+      "app": "Linear",
+      "claim_number": 5,
+      "field": "buildability_verdict",
+      "original_agent_value": "Review-required verdict",
+      "outcome": "missed_evidence",
+      "corrected_value": "Build now; personal keys support customer-specific use, while OAuth supports distributable integrations.",
+      "official_source_url": "https://linear.app/docs/api-and-webhooks",
+      "explanation": "Authentication, app creation, read/write operations and API breadth are all publicly resolved, with workspace permissions applying to key and app management.",
+      "failure_category": "custom-app versus public-distribution confusion"
+    },
+    {
+      "app": "Front",
+      "claim_number": 1,
+      "field": "authentication",
+      "original_agent_value": "Authentication methods unresolved",
+      "outcome": "missed_evidence",
+      "corrected_value": "Front supports OAuth 2.0 and company-level API tokens; public integrations normally require OAuth.",
+      "official_source_url": "https://dev.frontapp.com/docs/authentication",
+      "explanation": "Frontâ€™s authentication documentation explicitly lists bearer access through OAuth and API tokens.",
+      "failure_category": "custom-app versus public-distribution confusion"
+    },
+    {
+      "app": "Front",
+      "claim_number": 2,
+      "field": "api_breadth",
+      "original_agent_value": "Public developer API with partial read evidence",
+      "outcome": "supported",
+      "corrected_value": "Front exposes a public Core API covering conversations, messages, contacts, inboxes and other company resources.",
+      "official_source_url": "https://dev.frontapp.com/reference/introduction",
+      "explanation": "Front describes the Core API as a comprehensive public interface and documents OAuth and API-token access.",
+      "failure_category": null
+    },
+    {
+      "app": "Front",
+      "claim_number": 3,
+      "field": "api_breadth",
+      "original_agent_value": "Write/create/update operations unresolved",
+      "outcome": "missed_evidence",
+      "corrected_value": "Front supports write, delete and send permissions, including creating messages and creating or updating contacts and conversations.",
+      "official_source_url": "https://dev.frontapp.com/docs/create-and-revoke-api-tokens",
+      "explanation": "Official token documentation defines write as creating and updating resources and send as creating or replying to messages.",
+      "failure_category": "insufficient source retrieval"
+    },
+    {
+      "app": "Front",
+      "claim_number": 4,
+      "field": "independent_developer_access",
+      "original_agent_value": "Credential and administrator requirements unresolved",
+      "outcome": "missed_evidence",
+      "corrected_value": "A company admin must create apps and API tokens, and an admin must authorize both private and public OAuth apps.",
+      "official_source_url": "https://dev.frontapp.com/docs/create-and-manage-apps",
+      "explanation": "Front explicitly limits app creation, token management and OAuth authorization to company administrators.",
+      "failure_category": "custom-app versus public-distribution confusion"
+    },
+    {
+      "app": "Front",
+      "claim_number": 5,
+      "field": "buildability_verdict",
+      "original_agent_value": "Review-required buildability verdict",
+      "outcome": "missed_evidence",
+      "corrected_value": "Build now for one Front customer with admin-created credentials; public distribution requires OAuth and coordination with Front to publish in its App Store.",
+      "official_source_url": "https://dev.frontapp.com/docs/create-and-manage-apps",
+      "explanation": "Private apps work inside the creating instance immediately, while publishing to all customers requires notifying and working with Front.",
+      "failure_category": "custom-app versus public-distribution confusion"
+    },
+    {
+      "app": "Shopify",
+      "claim_number": 1,
+      "field": "authentication",
+      "original_agent_value": "OAuth authentication",
+      "outcome": "supported",
+      "corrected_value": "Public Shopify apps must authenticate merchants through OAuth immediately after installation.",
+      "official_source_url": "https://shopify.dev/docs/apps/launch/shopify-app-store/app-store-requirements",
+      "explanation": "Shopifyâ€™s App Store requirements explicitly mandate OAuth during installation and reinstallation.",
+      "failure_category": null
+    },
+    {
+      "app": "Shopify",
+      "claim_number": 2,
+      "field": "multi_tenant_partner_access",
+      "original_agent_value": "Partner/developer path and distinction between custom and public apps",
+      "outcome": "supported",
+      "corrected_value": "Public distribution supports many merchants, while custom distribution is limited to one store or stores in the same Shopify Plus organization.",
+      "official_source_url": "https://shopify.dev/docs/apps/launch/distribution/select-distribution-method",
+      "explanation": "Shopify separately documents public and custom distribution and warns that the selected method cannot later be changed.",
+      "failure_category": null
+    },
+    {
+      "app": "Shopify",
+      "claim_number": 3,
+      "field": "api_breadth",
+      "original_agent_value": "Marketplace/app-review requirement",
+      "outcome": "supported",
+      "corrected_value": "A publicly distributed App Store app must be submitted to and approved by Shopifyâ€™s review team.",
+      "official_source_url": "https://shopify.dev/docs/apps/launch/app-store-review/pass-app-review",
+      "explanation": "Shopify requires a production-ready app to pass its formal approval process before App Store distribution.",
+      "failure_category": null
+    },
+    {
+      "app": "Shopify",
+      "claim_number": 4,
+      "field": "existing_customer_admin_access",
+      "original_agent_value": "Current REST versus GraphQL positioning unresolved",
+      "outcome": "missed_evidence",
+      "corrected_value": "REST Admin API is legacy, and all new public apps have been required to use the GraphQL Admin API since April 1, 2025.",
+      "official_source_url": "https://shopify.dev/docs/apps/launch/shopify-app-store/app-store-requirements",
+      "explanation": "Shopify states both the REST legacy date and the GraphQL-only requirement for new public apps.",
+      "failure_category": "custom-app versus public-distribution confusion"
+    },
+    {
+      "app": "Shopify",
+      "claim_number": 5,
+      "field": "buildability_verdict",
+      "original_agent_value": "Marketplace-review and multi-tenant build verdict",
+      "outcome": "supported",
+      "corrected_value": "Build after app review for broad public distribution; use custom distribution or own-store credentials only for the limited merchant-specific path.",
+      "official_source_url": "https://shopify.dev/docs/apps/launch/distribution/select-distribution-method",
+      "explanation": "Public multi-merchant and custom merchant-specific paths have different installation and review requirements and must not be combined.",
+      "failure_category": null
+    },
+    {
+      "app": "Zoho CRM",
+      "claim_number": 1,
+      "field": "api_breadth",
+      "original_agent_value": "OAuth evidence unresolved",
+      "outcome": "missed_evidence",
+      "corrected_value": "Zoho CRM V8 APIs use OAuth 2.0 with client IDs, client secrets, authorization codes, access tokens and refresh tokens.",
+      "official_source_url": "https://www.zoho.com/crm/developer/docs/api/v8/oauth-overview.html",
+      "explanation": "Zohoâ€™s official OAuth overview directly documents delegated access and the complete token model.",
+      "failure_category": "insufficient source retrieval"
+    },
+    {
+      "app": "Zoho CRM",
+      "claim_number": 2,
+      "field": "api_breadth",
+      "original_agent_value": "Developer-console and client-creation access unresolved",
+      "outcome": "missed_evidence",
+      "corrected_value": "A developer with a Zoho CRM account can register a client through the Zoho API Console and generate organization-specific authorization.",
+      "official_source_url": "https://www.zoho.com/crm/developer/docs/api/v8/api-collection.html",
+      "explanation": "Zoho identifies a CRM account and registered self-client or web client as the prerequisites for API use.",
+      "failure_category": "insufficient source retrieval"
+    },
+    {
+      "app": "Zoho CRM",
+      "claim_number": 3,
+      "field": "api_breadth",
+      "original_agent_value": "Read/write operations and API breadth unresolved",
+      "outcome": "missed_evidence",
+      "corrected_value": "Zoho CRM exposes RESTful CRUD, metadata, composite, bulk, notification and query APIs.",
+      "official_source_url": "https://www.zoho.com/crm/developer/docs/api/v8/",
+      "explanation": "The official V8 index explicitly lists CRUD and several broad supporting API families.",
+      "failure_category": "insufficient source retrieval"
+    },
+    {
+      "app": "Zoho CRM",
+      "claim_number": 4,
+      "field": "mcp_status",
+      "original_agent_value": "Official Zoho MCP",
+      "outcome": "supported",
+      "corrected_value": "Zoho publishes and operates pre-built Zoho CRM MCP servers with read, CRUD, customization and workflow tools.",
+      "official_source_url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+      "explanation": "The source is hosted and maintained on Zohoâ€™s own developer domain and states that Zoho provides the servers without requiring users to host them.",
+      "failure_category": null
+    },
+    {
+      "app": "Zoho CRM",
+      "claim_number": 5,
+      "field": "buildability_verdict",
+      "original_agent_value": "Review-required buildability verdict",
+      "outcome": "missed_evidence",
+      "corrected_value": "Build now using OAuth and the API Console; customer operations remain limited by the authorizing userâ€™s CRM permissions and subscription API quota.",
+      "official_source_url": "https://www.zoho.com/crm/developer/docs/mcp/overview.html",
+      "explanation": "Both the REST and MCP paths are documented, and authorization is explicitly scoped to the authenticating userâ€™s permissions rather than a blanket administrator requirement.",
+      "failure_category": "custom-app versus public-distribution confusion"
+    }
+  ]
+}

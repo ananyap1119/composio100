@@ -1,0 +1,247 @@
+{
+  "app_id": "pylon",
+  "app_name": "Pylon",
+  "domain": "usepylon.com",
+  "category": "Agentic B2B Support",
+  "description": "Create workflows, configure agents, routing, and agents just by asking. Give humans and agents full context across every customer interaction, account, and product system.",
+  "authentication": {
+    "methods": [
+      "bearer_token"
+    ],
+    "notes": null,
+    "field_confidence": "high",
+    "evidence_ids": [
+      "evidence-003"
+    ]
+  },
+  "credential_access": {
+    "independent_developer_access": "unknown",
+    "existing_customer_access": "workspace_admin_required",
+    "multi_tenant_integration_access": "unknown",
+    "free_or_trial_notes": null,
+    "paid_plan_notes": null,
+    "admin_or_approval_notes": null,
+    "field_confidence": "medium",
+    "evidence_ids": [
+      "evidence-004"
+    ]
+  },
+  "api_surface": {
+    "documented_public_api": true,
+    "rest": true,
+    "graphql": null,
+    "webhooks": true,
+    "websocket": null,
+    "sdk_available": null,
+    "read_operations": true,
+    "write_operations": true,
+    "bulk_operations": true,
+    "api_breadth": "broad",
+    "important_resources": [],
+    "limitations": [],
+    "field_confidence": "high",
+    "evidence_ids": [
+      "evidence-005",
+      "evidence-006",
+      "evidence-007",
+      "evidence-008",
+      "evidence-009",
+      "evidence-010",
+      "evidence-011"
+    ]
+  },
+  "mcp": {
+    "status": "unknown",
+    "official_url": null,
+    "transport_or_hosting_notes": null,
+    "capabilities": [],
+    "limitations": [],
+    "field_confidence": "low",
+    "evidence_ids": []
+  },
+  "buildability": {
+    "verdict": "build_with_customer_credentials",
+    "main_blocker": null,
+    "secondary_blockers": [],
+    "single_workspace_buildable": null,
+    "public_multi_tenant_buildable": null,
+    "reasoning_summary": null,
+    "field_confidence": "low",
+    "evidence_ids": []
+  },
+  "evidence": [
+    {
+      "evidence_id": "evidence-001",
+      "field": "category",
+      "claim": "category is Agentic B2B Support.",
+      "url": "https://www.usepylon.com/superhuman",
+      "page_title": "Pylon: Agentic B2B Support",
+      "source_type": "official",
+      "excerpt": "Pylon is the only agentic support platform purpose-built for B2B.",
+      "retrieved_at": "2026-07-17T08:15:04.023527Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-002",
+      "field": "description",
+      "claim": "description is Create workflows, configure agents, routing, and agents just by asking. Give humans and agents full context across every customer interaction, account, and product system..",
+      "url": "https://www.usepylon.com/superhuman",
+      "page_title": "Pylon: Agentic B2B Support",
+      "source_type": "official",
+      "excerpt": "Create workflows, configure agents, routing, and agents just by asking.",
+      "retrieved_at": "2026-07-17T08:15:04.023527Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-003",
+      "field": "authentication",
+      "claim": "authentication_methods is ['bearer_token'].",
+      "url": "https://docs.usepylon.com/pylon-docs/developer/api/authentication",
+      "page_title": "Authentication | Pylon",
+      "source_type": "official",
+      "excerpt": "The Pylon API uses Bearer authentication.",
+      "retrieved_at": "2026-07-17T08:15:04.023527Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-004",
+      "field": "credential_access.existing_customer_access",
+      "claim": "existing_customer_access is workspace_admin_required.",
+      "url": "https://docs.usepylon.com/pylon-docs/platform/roles-and-user-management",
+      "page_title": "Roles & User Management | Pylon",
+      "source_type": "official",
+      "excerpt": "Access to powerful developer features like creating API tokens",
+      "retrieved_at": "2026-07-17T08:15:04.023527Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-005",
+      "field": "api_surface.documented_public_api",
+      "claim": "documented_api is supported.",
+      "url": "https://docs.usepylon.com/pylon-docs/developer",
+      "page_title": "API | Pylon",
+      "source_type": "official",
+      "excerpt": "Check out our API Reference for specifications on all endpoints.",
+      "retrieved_at": "2026-07-17T08:15:04.023527Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-006",
+      "field": "api_surface.rest",
+      "claim": "rest is supported.",
+      "url": "https://docs.usepylon.com/pylon-docs/developer/api/api-reference/knowledge-base.md",
+      "page_title": "Knowledge Base",
+      "source_type": "official",
+      "excerpt": "{\"openapi\":\"3.0.3\",\"info\":{\"title\":\"Pylon API.\",\"version\":\"1.0.0\"},\"servers\":[{\"url\":\"https://api.usepylon.com\"}]",
+      "retrieved_at": "2026-07-17T08:15:04.023527Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-007",
+      "field": "api_surface.read_operations",
+      "claim": "read_operations is supported.",
+      "url": "https://docs.usepylon.com/pylon-docs/developer",
+      "page_title": "API | Pylon",
+      "source_type": "official",
+      "excerpt": "Fetching information about customers",
+      "retrieved_at": "2026-07-17T08:15:04.023527Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-008",
+      "field": "api_surface.write_operations",
+      "claim": "write_operations is supported.",
+      "url": "https://docs.usepylon.com/pylon-docs/developer",
+      "page_title": "API | Pylon",
+      "source_type": "official",
+      "excerpt": "Creating issues programmatically",
+      "retrieved_at": "2026-07-17T08:15:04.023527Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-009",
+      "field": "api_surface.api_breadth",
+      "claim": "api_breadth is broad.",
+      "url": "https://docs.usepylon.com/pylon-docs/developer",
+      "page_title": "API | Pylon",
+      "source_type": "official",
+      "excerpt": "Fetching information about customers",
+      "retrieved_at": "2026-07-17T08:15:04.023527Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-010",
+      "field": "api_surface.bulk_operations",
+      "claim": "bulk_operations is supported.",
+      "url": "https://docs.usepylon.com/pylon-docs/developer/api/api-reference/accounts.md",
+      "page_title": "Accounts",
+      "source_type": "official",
+      "excerpt": "Update multiple accounts",
+      "retrieved_at": "2026-07-17T08:15:04.023527Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-011",
+      "field": "api_surface.webhooks",
+      "claim": "webhooks_events is supported.",
+      "url": "https://docs.usepylon.com/pylon-docs/developer/webhooks",
+      "page_title": "Webhooks | Pylon",
+      "source_type": "official",
+      "excerpt": "Webhooks are user-defined HTTP callbacks that are triggered by specific events within Pylon.",
+      "retrieved_at": "2026-07-17T08:15:04.023527Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    }
+  ],
+  "unresolved_questions": [
+    "Normalization: existing_customer_access: excerpts normalized",
+    "independent_developer_access: unresolved",
+    "multi_tenant_integration_access: unresolved",
+    "graphql: unresolved",
+    "websocket: unresolved",
+    "sdk_available: unresolved",
+    "mcp_status: unresolved"
+  ],
+  "verification": {
+    "status": "finalized",
+    "researcher_completed_at": null,
+    "verifier_completed_at": null,
+    "human_reviewed_at": null,
+    "researcher_model": null,
+    "verifier_model": null,
+    "researcher_verifier_disagreements": [],
+    "human_corrections": [],
+    "human_failure_types": {},
+    "researcher_policy_version": "tolerant_core_supplementary_v3",
+    "finalized_by": "deterministic_finalization_gate",
+    "human_reviewed": false,
+    "audit_status": "not_sampled",
+    "overall_confidence": "medium"
+  },
+  "timestamps": {
+    "created_at": "2026-07-17T08:15:04.023527Z",
+    "updated_at": "2026-07-17T08:15:04.023527Z"
+  },
+  "source_order": 15
+}

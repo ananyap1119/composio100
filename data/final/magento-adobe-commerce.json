@@ -1,0 +1,266 @@
+{
+  "app_id": "magento-adobe-commerce",
+  "app_name": "Magento (Adobe Commerce)",
+  "domain": "developer.adobe.com/commerce",
+  "category": null,
+  "description": null,
+  "authentication": {
+    "methods": [
+      "oauth2",
+      "bearer_token",
+      "basic_auth"
+    ],
+    "notes": null,
+    "field_confidence": "high",
+    "evidence_ids": [
+      "evidence-001"
+    ]
+  },
+  "credential_access": {
+    "independent_developer_access": "self_serve_free",
+    "existing_customer_access": "unknown",
+    "multi_tenant_integration_access": "unknown",
+    "free_or_trial_notes": null,
+    "paid_plan_notes": null,
+    "admin_or_approval_notes": null,
+    "field_confidence": "medium",
+    "evidence_ids": [
+      "evidence-002"
+    ]
+  },
+  "api_surface": {
+    "documented_public_api": true,
+    "rest": true,
+    "graphql": true,
+    "webhooks": false,
+    "websocket": null,
+    "sdk_available": null,
+    "read_operations": true,
+    "write_operations": true,
+    "bulk_operations": null,
+    "api_breadth": "broad",
+    "important_resources": [],
+    "limitations": [],
+    "field_confidence": "high",
+    "evidence_ids": [
+      "evidence-003",
+      "evidence-004",
+      "evidence-005",
+      "evidence-006",
+      "evidence-007",
+      "evidence-008",
+      "evidence-009",
+      "evidence-010",
+      "evidence-011",
+      "evidence-012"
+    ]
+  },
+  "mcp": {
+    "status": "unknown",
+    "official_url": null,
+    "transport_or_hosting_notes": null,
+    "capabilities": [],
+    "limitations": [],
+    "field_confidence": "low",
+    "evidence_ids": []
+  },
+  "buildability": {
+    "verdict": "build_now",
+    "main_blocker": null,
+    "secondary_blockers": [],
+    "single_workspace_buildable": null,
+    "public_multi_tenant_buildable": null,
+    "reasoning_summary": null,
+    "field_confidence": "low",
+    "evidence_ids": []
+  },
+  "evidence": [
+    {
+      "evidence_id": "evidence-001",
+      "field": "authentication",
+      "claim": "authentication_methods is ['oauth2', 'bearer_token', 'basic_auth'].",
+      "url": "https://developer.adobe.com/commerce/webapi/rest/",
+      "page_title": "REST API Overview",
+      "source_type": "official",
+      "excerpt": "Third-party applications authenticate with OAuth 1.0a.",
+      "retrieved_at": "2026-07-17T08:33:00.559998Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-002",
+      "field": "credential_access.independent_developer_access",
+      "claim": "independent_developer_access is self_serve_free.",
+      "url": "https://developer.adobe.com/commerce/marketplace/guides/sellers/developer-register",
+      "page_title": "Register as a developer",
+      "source_type": "official",
+      "excerpt": "Go to the Developer Portal page, and click Create Account.",
+      "retrieved_at": "2026-07-17T08:33:00.559998Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-003",
+      "field": "api_surface.documented_public_api",
+      "claim": "documented_api is supported.",
+      "url": "https://developer.adobe.com/commerce/webapi/rest/",
+      "page_title": "REST API Overview",
+      "source_type": "official",
+      "excerpt": "The REST API documentation describes the REST APIs that are available in Adobe Commerce (PaaS) and Adobe Commerce as a Cloud Service (SaaS).",
+      "retrieved_at": "2026-07-17T08:33:00.559998Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-004",
+      "field": "api_surface.rest",
+      "claim": "rest is supported.",
+      "url": "https://developer.adobe.com/commerce/webapi/rest/",
+      "page_title": "REST API Overview",
+      "source_type": "official",
+      "excerpt": "The REST API documentation describes the REST APIs that are available in Adobe Commerce (PaaS) and Adobe Commerce as a Cloud Service (SaaS).",
+      "retrieved_at": "2026-07-17T08:33:00.559998Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-005",
+      "field": "api_surface.rest",
+      "claim": "rest is supported.",
+      "url": "https://developer.adobe.com/commerce/webapi/get-started/",
+      "page_title": "Getting Started with Adobe Commerce Web APIs",
+      "source_type": "official",
+      "excerpt": "Support for GraphQL, REST(Representational State Transfer) and SOAP(Simple Object Access Protocol).",
+      "retrieved_at": "2026-07-17T08:33:00.559998Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-006",
+      "field": "api_surface.read_operations",
+      "claim": "read_operations is supported.",
+      "url": "https://developer.adobe.com/commerce/webapi/rest/",
+      "page_title": "REST API Overview",
+      "source_type": "official",
+      "excerpt": "The APIs can be used to perform a wide array of tasks.",
+      "retrieved_at": "2026-07-17T08:33:00.559998Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-007",
+      "field": "api_surface.read_operations",
+      "claim": "read_operations is supported.",
+      "url": "https://developer.adobe.com/commerce/webapi/get-started/",
+      "page_title": "Getting Started with Adobe Commerce Web APIs",
+      "source_type": "official",
+      "excerpt": "The framework is based on the CRUD (create, read, update, delete) & search model.",
+      "retrieved_at": "2026-07-17T08:33:00.559998Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-008",
+      "field": "api_surface.write_operations",
+      "claim": "write_operations is supported.",
+      "url": "https://developer.adobe.com/commerce/webapi/rest/",
+      "page_title": "REST API Overview",
+      "source_type": "official",
+      "excerpt": "The APIs can be used to perform a wide array of tasks.",
+      "retrieved_at": "2026-07-17T08:33:00.559998Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-009",
+      "field": "api_surface.write_operations",
+      "claim": "write_operations is supported.",
+      "url": "https://developer.adobe.com/commerce/webapi/get-started/",
+      "page_title": "Getting Started with Adobe Commerce Web APIs",
+      "source_type": "official",
+      "excerpt": "The framework is based on the CRUD (create, read, update, delete) & search model.",
+      "retrieved_at": "2026-07-17T08:33:00.559998Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-010",
+      "field": "api_surface.api_breadth",
+      "claim": "api_breadth is broad.",
+      "url": "https://developer.adobe.com/commerce/webapi/rest/",
+      "page_title": "REST API Overview",
+      "source_type": "official",
+      "excerpt": "Adobe Commerce provides a wide range of REST API endpoints that allow you to perform actions on behalf of Commerce administrators, customers, and guest shoppers.",
+      "retrieved_at": "2026-07-17T08:33:00.559998Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-011",
+      "field": "api_surface.graphql",
+      "claim": "graphql is supported.",
+      "url": "https://developer.adobe.com/commerce/webapi/get-started/",
+      "page_title": "Getting Started with Adobe Commerce Web APIs",
+      "source_type": "official",
+      "excerpt": "Support for GraphQL, REST(Representational State Transfer) and SOAP(Simple Object Access Protocol).",
+      "retrieved_at": "2026-07-17T08:33:00.559998Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-012",
+      "field": "api_surface.webhooks",
+      "claim": "webhooks_events is not_supported.",
+      "url": "https://developer.adobe.com/commerce/webapi/get-started/",
+      "page_title": "Getting Started with Adobe Commerce Web APIs",
+      "source_type": "official",
+      "excerpt": "The system does not currently support webhooks.",
+      "retrieved_at": "2026-07-17T08:33:00.559998Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    }
+  ],
+  "unresolved_questions": [
+    "category: unresolved",
+    "description: unresolved",
+    "existing_customer_access: unresolved",
+    "multi_tenant_integration_access: unresolved",
+    "bulk_operations: unresolved",
+    "websocket: unresolved",
+    "sdk_available: unresolved",
+    "mcp_status: unresolved"
+  ],
+  "verification": {
+    "status": "finalized",
+    "researcher_completed_at": null,
+    "verifier_completed_at": null,
+    "human_reviewed_at": null,
+    "researcher_model": null,
+    "verifier_model": null,
+    "researcher_verifier_disagreements": [],
+    "human_corrections": [],
+    "human_failure_types": {},
+    "researcher_policy_version": "tolerant_core_supplementary_v3",
+    "finalized_by": "deterministic_finalization_gate",
+    "human_reviewed": false,
+    "audit_status": "not_sampled",
+    "overall_confidence": "medium"
+  },
+  "timestamps": {
+    "created_at": "2026-07-17T08:33:00.559998Z",
+    "updated_at": "2026-07-17T08:33:00.559998Z"
+  },
+  "source_order": 45
+}

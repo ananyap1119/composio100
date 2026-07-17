@@ -1,0 +1,238 @@
+{
+  "app_id": "woocommerce",
+  "app_name": "WooCommerce",
+  "domain": "woocommerce.com/document/woocommerce-rest-api",
+  "category": "ecommerce_platform",
+  "description": "WooCommerce is the world’s top open-source platform, loved by developers for its infinite customization and flexibility.",
+  "authentication": {
+    "methods": [
+      "api_key",
+      "basic_auth",
+      "bearer_token",
+      "oauth2"
+    ],
+    "notes": null,
+    "field_confidence": "high",
+    "evidence_ids": [
+      "evidence-003"
+    ]
+  },
+  "credential_access": {
+    "independent_developer_access": "self_serve_free",
+    "existing_customer_access": "unknown",
+    "multi_tenant_integration_access": "marketplace_review_required",
+    "free_or_trial_notes": null,
+    "paid_plan_notes": null,
+    "admin_or_approval_notes": null,
+    "field_confidence": "medium",
+    "evidence_ids": [
+      "evidence-004",
+      "evidence-005"
+    ]
+  },
+  "api_surface": {
+    "documented_public_api": null,
+    "rest": true,
+    "graphql": null,
+    "webhooks": null,
+    "websocket": null,
+    "sdk_available": true,
+    "read_operations": true,
+    "write_operations": true,
+    "bulk_operations": null,
+    "api_breadth": "broad",
+    "important_resources": [],
+    "limitations": [],
+    "field_confidence": "medium",
+    "evidence_ids": [
+      "evidence-006",
+      "evidence-007",
+      "evidence-008",
+      "evidence-009",
+      "evidence-010"
+    ]
+  },
+  "mcp": {
+    "status": "unknown",
+    "official_url": null,
+    "transport_or_hosting_notes": null,
+    "capabilities": [],
+    "limitations": [],
+    "field_confidence": "low",
+    "evidence_ids": []
+  },
+  "buildability": {
+    "verdict": "build_now",
+    "main_blocker": null,
+    "secondary_blockers": [],
+    "single_workspace_buildable": null,
+    "public_multi_tenant_buildable": null,
+    "reasoning_summary": null,
+    "field_confidence": "low",
+    "evidence_ids": []
+  },
+  "evidence": [
+    {
+      "evidence_id": "evidence-001",
+      "field": "category",
+      "claim": "category is ecommerce_platform.",
+      "url": "https://woocommerce.com/woocommerce/",
+      "page_title": "What is WooCommerce? - WooCommerce",
+      "source_type": "official",
+      "excerpt": "Only WooCommerce’s customizable ecommerce platform offers the freedom to sell and grow on your terms",
+      "retrieved_at": "2026-07-17T08:30:52.636001Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-002",
+      "field": "description",
+      "claim": "description is WooCommerce is the world’s top open-source platform, loved by developers for its infinite customization and flexibility..",
+      "url": "https://woocommerce.com/woocommerce/",
+      "page_title": "What is WooCommerce? - WooCommerce",
+      "source_type": "official",
+      "excerpt": "WooCommerce is the world’s top open-source platform, loved by developers for its infinite customization and flexibility.",
+      "retrieved_at": "2026-07-17T08:30:52.636001Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-003",
+      "field": "authentication",
+      "claim": "authentication_methods is ['api_key', 'basic_auth', 'bearer_token', 'oauth2'].",
+      "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication/",
+      "page_title": "Authentication | WooCommerce developer docs",
+      "source_type": "official",
+      "excerpt": "WooCommerce includes two ways to authenticate with the WP REST API.",
+      "retrieved_at": "2026-07-17T08:30:52.636001Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-004",
+      "field": "credential_access.independent_developer_access",
+      "claim": "independent_developer_access is self_serve_free.",
+      "url": "https://developer.woocommerce.com/docs/getting-started/development-environment/",
+      "page_title": "Setting up your development environment | WooCommerce developer docs",
+      "source_type": "official",
+      "excerpt": "Setting up your development environment | WooCommerce developer docs",
+      "retrieved_at": "2026-07-17T08:30:52.636001Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-005",
+      "field": "credential_access.multi_tenant_integration_access",
+      "claim": "multi_tenant_integration_access is marketplace_review_required.",
+      "url": "https://developer.woocommerce.com/docs/woo-marketplace/",
+      "page_title": "Woo Marketplace | WooCommerce developer docs",
+      "source_type": "official",
+      "excerpt": "Before getting started, make sure you have applied for a Marketplace vendor account and your application has been approved.",
+      "retrieved_at": "2026-07-17T08:30:52.636001Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-006",
+      "field": "api_surface.rest",
+      "claim": "rest is supported.",
+      "url": "https://developer.woocommerce.com/docs/apis/rest-api/",
+      "page_title": "WooCommerce REST API | WooCommerce developer docs",
+      "source_type": "official",
+      "excerpt": "WooCommerce (WC) 2.6+ is fully integrated with the WordPress REST API.",
+      "retrieved_at": "2026-07-17T08:30:52.636001Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-007",
+      "field": "api_surface.read_operations",
+      "claim": "read_operations is supported.",
+      "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication/",
+      "page_title": "Authentication | WooCommerce developer docs",
+      "source_type": "official",
+      "excerpt": "Choose the level of access for this REST API key, which can be Read access, Write access or Read/Write access.",
+      "retrieved_at": "2026-07-17T08:30:52.636001Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-008",
+      "field": "api_surface.write_operations",
+      "claim": "write_operations is supported.",
+      "url": "https://developer.woocommerce.com/docs/apis/rest-api/authentication/",
+      "page_title": "Authentication | WooCommerce developer docs",
+      "source_type": "official",
+      "excerpt": "Choose the level of access for this REST API key, which can be Read access, Write access or Read/Write access.",
+      "retrieved_at": "2026-07-17T08:30:52.636001Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-009",
+      "field": "api_surface.api_breadth",
+      "claim": "api_breadth is broad.",
+      "url": "https://developer.woocommerce.com/docs/apis/rest-api/",
+      "page_title": "WooCommerce REST API | WooCommerce developer docs",
+      "source_type": "official",
+      "excerpt": "WooCommerce (WC) 2.6+ is fully integrated with the WordPress REST API.",
+      "retrieved_at": "2026-07-17T08:30:52.636001Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-010",
+      "field": "api_surface.sdk_available",
+      "claim": "sdk_available is supported.",
+      "url": "https://developer.woocommerce.com/docs/apis/rest-api/",
+      "page_title": "WooCommerce REST API | WooCommerce developer docs",
+      "source_type": "official",
+      "excerpt": "Official libraries",
+      "retrieved_at": "2026-07-17T08:30:52.636001Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    }
+  ],
+  "unresolved_questions": [
+    "Normalization: existing_customer_access: concrete value invalidated because evidence was missing",
+    "Normalization: documented_api: concrete value invalidated because evidence was missing",
+    "existing_customer_access: unresolved",
+    "documented_api: unresolved",
+    "graphql: unresolved",
+    "bulk_operations: unresolved",
+    "webhooks_events: unresolved",
+    "websocket: unresolved",
+    "mcp_status: unresolved"
+  ],
+  "verification": {
+    "status": "finalized",
+    "researcher_completed_at": null,
+    "verifier_completed_at": null,
+    "human_reviewed_at": null,
+    "researcher_model": null,
+    "verifier_model": null,
+    "researcher_verifier_disagreements": [],
+    "human_corrections": [],
+    "human_failure_types": {},
+    "researcher_policy_version": "tolerant_core_supplementary_v3",
+    "finalized_by": "deterministic_finalization_gate",
+    "human_reviewed": false,
+    "audit_status": "not_sampled",
+    "overall_confidence": "medium"
+  },
+  "timestamps": {
+    "created_at": "2026-07-17T08:30:52.636001Z",
+    "updated_at": "2026-07-17T08:30:52.636001Z"
+  },
+  "source_order": 42
+}

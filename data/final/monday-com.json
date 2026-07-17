@@ -1,0 +1,268 @@
+{
+  "app_id": "monday-com",
+  "app_name": "Monday.com",
+  "domain": "developer.monday.com",
+  "category": null,
+  "description": null,
+  "authentication": {
+    "methods": [
+      "api_key",
+      "oauth2",
+      "jwt"
+    ],
+    "notes": null,
+    "field_confidence": "high",
+    "evidence_ids": [
+      "evidence-001",
+      "evidence-002"
+    ]
+  },
+  "credential_access": {
+    "independent_developer_access": "unknown",
+    "existing_customer_access": "unknown",
+    "multi_tenant_integration_access": "marketplace_review_required",
+    "free_or_trial_notes": null,
+    "paid_plan_notes": null,
+    "admin_or_approval_notes": null,
+    "field_confidence": "medium",
+    "evidence_ids": [
+      "evidence-003"
+    ]
+  },
+  "api_surface": {
+    "documented_public_api": true,
+    "rest": null,
+    "graphql": true,
+    "webhooks": true,
+    "websocket": null,
+    "sdk_available": true,
+    "read_operations": true,
+    "write_operations": true,
+    "bulk_operations": null,
+    "api_breadth": "broad",
+    "important_resources": [],
+    "limitations": [],
+    "field_confidence": "high",
+    "evidence_ids": [
+      "evidence-004",
+      "evidence-005",
+      "evidence-006",
+      "evidence-007",
+      "evidence-008",
+      "evidence-009",
+      "evidence-010",
+      "evidence-011",
+      "evidence-012"
+    ]
+  },
+  "mcp": {
+    "status": "unknown",
+    "official_url": null,
+    "transport_or_hosting_notes": null,
+    "capabilities": [],
+    "limitations": [],
+    "field_confidence": "low",
+    "evidence_ids": []
+  },
+  "buildability": {
+    "verdict": "build_after_app_review",
+    "main_blocker": null,
+    "secondary_blockers": [],
+    "single_workspace_buildable": null,
+    "public_multi_tenant_buildable": null,
+    "reasoning_summary": null,
+    "field_confidence": "low",
+    "evidence_ids": []
+  },
+  "evidence": [
+    {
+      "evidence_id": "evidence-001",
+      "field": "authentication",
+      "claim": "authentication_methods is ['api_key', 'oauth2', 'jwt'].",
+      "url": "https://developer.monday.com/apps/docs/choosing-auth",
+      "page_title": "Choosing an authentication method",
+      "source_type": "official",
+      "excerpt": "The monday API uses token-based authentication.",
+      "retrieved_at": "2026-07-17T08:55:44.436406Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-002",
+      "field": "authentication",
+      "claim": "authentication_methods is ['api_key', 'oauth2', 'jwt'].",
+      "url": "https://developer.monday.com/apps/docs/integration-authorization",
+      "page_title": "Authentication",
+      "source_type": "official",
+      "excerpt": "monday.com signs every outbound request with a JWT (JSON Web Token) in the `Authorization` header.",
+      "retrieved_at": "2026-07-17T08:55:44.436406Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-003",
+      "field": "credential_access.multi_tenant_integration_access",
+      "claim": "multi_tenant_integration_access is marketplace_review_required.",
+      "url": "https://developer.monday.com/apps/docs/submit-your-app",
+      "page_title": "Submit your app to the marketplace",
+      "source_type": "official",
+      "excerpt": "All apps must go through a four-phase process before receiving marketplace approval.",
+      "retrieved_at": "2026-07-17T08:55:44.436406Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-004",
+      "field": "api_surface.documented_public_api",
+      "claim": "documented_api is supported.",
+      "url": "https://developer.monday.com/apps/docs/choosing-auth",
+      "page_title": "Choosing an authentication method",
+      "source_type": "official",
+      "excerpt": "Fetch the complete documentation index at: https://developer.monday.com/llms.txt",
+      "retrieved_at": "2026-07-17T08:55:44.436406Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-005",
+      "field": "api_surface.read_operations",
+      "claim": "read_operations is supported.",
+      "url": "https://developer.monday.com/api-reference",
+      "page_title": "monday.com Platform API",
+      "source_type": "official",
+      "excerpt": "Broad platform coverage to read and modify boards, leads, docs, updates, and much more.",
+      "retrieved_at": "2026-07-17T08:55:44.436406Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-006",
+      "field": "api_surface.read_operations",
+      "claim": "read_operations is supported.",
+      "url": "https://developer.monday.com/apps/docs/oauth",
+      "page_title": "OAuth and Permissions",
+      "source_type": "official",
+      "excerpt": "| Scope | Description |\n| --- | --- |\n| account:read | Read general information about the account |\n| assets:read | Read data from assets the user has access to |\n| boards:read | Rea",
+      "retrieved_at": "2026-07-17T08:55:44.436406Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-007",
+      "field": "api_surface.write_operations",
+      "claim": "write_operations is supported.",
+      "url": "https://developer.monday.com/api-reference",
+      "page_title": "monday.com Platform API",
+      "source_type": "official",
+      "excerpt": "Broad platform coverage to read and modify boards, leads, docs, updates, and much more.",
+      "retrieved_at": "2026-07-17T08:55:44.436406Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-008",
+      "field": "api_surface.api_breadth",
+      "claim": "api_breadth is broad.",
+      "url": "https://developer.monday.com/api-reference",
+      "page_title": "monday.com Platform API",
+      "source_type": "official",
+      "excerpt": "Broad platform coverage to read and modify boards, leads, docs, updates, and much more.",
+      "retrieved_at": "2026-07-17T08:55:44.436406Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-009",
+      "field": "api_surface.graphql",
+      "claim": "graphql is supported.",
+      "url": "https://developer.monday.com/apps/docs/choosing-auth",
+      "page_title": "Choosing an authentication method",
+      "source_type": "official",
+      "excerpt": "Any data that comes from a user’s monday.com account must be accessed via the monday GraphQL API.",
+      "retrieved_at": "2026-07-17T08:55:44.436406Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-010",
+      "field": "api_surface.graphql",
+      "claim": "graphql is supported.",
+      "url": "https://developer.monday.com/api-reference/docs/getting-started",
+      "page_title": "Making your first request",
+      "source_type": "official",
+      "excerpt": "GraphQL APIs use a single endpoint for all operations (unlike REST APIs).",
+      "retrieved_at": "2026-07-17T08:55:44.436406Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-011",
+      "field": "api_surface.webhooks",
+      "claim": "webhooks_events is supported.",
+      "url": "https://developer.monday.com/apps/docs/integration-authorization",
+      "page_title": "Authentication",
+      "source_type": "official",
+      "excerpt": "monday.com signs every outbound request with a JWT (JSON Web Token) in the `Authorization` header.",
+      "retrieved_at": "2026-07-17T08:55:44.436406Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-012",
+      "field": "api_surface.sdk_available",
+      "claim": "sdk_available is supported.",
+      "url": "https://developer.monday.com/apps/docs/choosing-auth",
+      "page_title": "Choosing an authentication method",
+      "source_type": "official",
+      "excerpt": "Seamless Authentication using monday SDK",
+      "retrieved_at": "2026-07-17T08:55:44.436406Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    }
+  ],
+  "unresolved_questions": [
+    "Normalization: independent_developer_access: concrete value invalidated because evidence was missing",
+    "Normalization: rest: concrete value invalidated because evidence was missing",
+    "category: unresolved",
+    "description: unresolved",
+    "independent_developer_access: unresolved",
+    "existing_customer_access: unresolved",
+    "rest: unresolved",
+    "bulk_operations: unresolved",
+    "websocket: unresolved",
+    "mcp_status: unresolved"
+  ],
+  "verification": {
+    "status": "finalized",
+    "researcher_completed_at": null,
+    "verifier_completed_at": null,
+    "human_reviewed_at": null,
+    "researcher_model": null,
+    "verifier_model": null,
+    "researcher_verifier_disagreements": [],
+    "human_corrections": [],
+    "human_failure_types": {},
+    "researcher_policy_version": "tolerant_core_supplementary_v3",
+    "finalized_by": "deterministic_finalization_gate",
+    "human_reviewed": false,
+    "audit_status": "not_sampled",
+    "overall_confidence": "medium"
+  },
+  "timestamps": {
+    "created_at": "2026-07-17T08:55:44.436406Z",
+    "updated_at": "2026-07-17T08:55:44.436406Z"
+  },
+  "source_order": 76
+}

@@ -1,0 +1,21 @@
+{
+  "app_id": "otter-ai",
+  "locked_fields": [
+    "existing_customer_admin_access"
+  ],
+  "fields_to_research": [
+    "authentication",
+    "api_breadth"
+  ],
+  "fields_to_correct": [
+    "existing_customer_admin_access"
+  ],
+  "fields_left_unresolved": [
+    "buildability_verdict"
+  ],
+  "reason": {
+    "mode": "offline_field_level_resume",
+    "new_composio_calls": 0,
+    "new_openrouter_calls": 0
+  }
+}

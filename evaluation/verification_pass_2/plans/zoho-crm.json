@@ -1,0 +1,19 @@
+{
+  "app_id": "zoho-crm",
+  "locked_fields": [
+    "mcp_status"
+  ],
+  "fields_to_research": [
+    "api_breadth",
+    "api_breadth",
+    "api_breadth",
+    "buildability_verdict"
+  ],
+  "fields_to_correct": [],
+  "fields_left_unresolved": [],
+  "reason": {
+    "mode": "offline_field_level_resume",
+    "new_composio_calls": 0,
+    "new_openrouter_calls": 0
+  }
+}

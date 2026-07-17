@@ -1,0 +1,101 @@
+app_id,source_order,category_group,app_name,website_hint,normalized_domain,calibration_set
+salesforce,1,CRM,Salesforce,salesforce.com,salesforce.com,true
+hubspot,2,CRM,HubSpot,hubspot.com,hubspot.com,true
+pipedrive,3,CRM,Pipedrive,pipedrive.com,pipedrive.com,true
+attio,4,CRM,Attio,attio.com,attio.com,true
+twenty,5,CRM,Twenty,twenty.com (open-source CRM),twenty.com,true
+podio,6,CRM,Podio,podio.com,podio.com,true
+zoho-crm,7,CRM,Zoho CRM,zoho.com/crm,zoho.com/crm,true
+close,8,CRM,Close,close.com,close.com,true
+copper,9,CRM,Copper,copper.com,copper.com,true
+dealcloud,10,CRM,DealCloud,api.docs.dealcloud.com,api.docs.dealcloud.com,true
+zendesk,11,Customer Support,Zendesk,zendesk.com,zendesk.com,false
+intercom,12,Customer Support,Intercom,intercom.com,intercom.com,false
+freshdesk,13,Customer Support,Freshdesk,freshdesk.com,freshdesk.com,false
+front,14,Customer Support,Front,front.com,front.com,false
+pylon,15,Customer Support,Pylon,usepylon.com,usepylon.com,false
+liveagent,16,Customer Support,LiveAgent,liveagent.com,liveagent.com,false
+plain,17,Customer Support,Plain,plain.com,plain.com,false
+help-scout,18,Customer Support,Help Scout,helpscout.com,helpscout.com,false
+gorgias,19,Customer Support,Gorgias,gorgias.com,gorgias.com,false
+gladly,20,Customer Support,Gladly,gladly.com,gladly.com,false
+slack,21,Communication,Slack,slack.com,slack.com,false
+twilio,22,Communication,Twilio,twilio.com,twilio.com,false
+zoho-cliq,23,Communication,Zoho Cliq,zoho.com/cliq,zoho.com/cliq,false
+lark-larksuite,24,Communication,Lark (Larksuite),open.larksuite.com,open.larksuite.com,false
+pumble,25,Communication,Pumble,pumble.com,pumble.com,false
+discord,26,Communication,Discord,discord.com,discord.com,false
+telegram,27,Communication,Telegram,core.telegram.org,core.telegram.org,false
+whatsapp-business,28,Communication,WhatsApp Business,developers.facebook.com/docs/whatsapp,developers.facebook.com/docs/whatsapp,false
+aircall,29,Communication,Aircall,aircall.io,aircall.io,false
+vonage,30,Communication,Vonage,developer.vonage.com,developer.vonage.com,false
+google-ads,31,"Marketing, Ads, Email and Social",Google Ads,developers.google.com/google-ads,developers.google.com/google-ads,false
+meta-ads,32,"Marketing, Ads, Email and Social",Meta Ads,developers.facebook.com/docs/marketing-apis,developers.facebook.com/docs/marketing-apis,false
+linkedin-ads,33,"Marketing, Ads, Email and Social",LinkedIn Ads,learn.microsoft.com/linkedin/marketing,learn.microsoft.com/linkedin/marketing,false
+gohighlevel,34,"Marketing, Ads, Email and Social",GoHighLevel,highlevel.stoplight.io,highlevel.stoplight.io,false
+mailchimp,35,"Marketing, Ads, Email and Social",Mailchimp,mailchimp.com/developer,mailchimp.com/developer,false
+klaviyo,36,"Marketing, Ads, Email and Social",Klaviyo,developers.klaviyo.com,developers.klaviyo.com,false
+systeme-io,37,"Marketing, Ads, Email and Social",systeme.io,systeme.io (funnel builder),systeme.io,false
+pinterest,38,"Marketing, Ads, Email and Social",Pinterest,developers.pinterest.com,developers.pinterest.com,false
+threads-meta,39,"Marketing, Ads, Email and Social",Threads (Meta),developers.facebook.com/docs/threads,developers.facebook.com/docs/threads,false
+sendgrid,40,"Marketing, Ads, Email and Social",SendGrid,sendgrid.com,sendgrid.com,false
+shopify,41,Ecommerce,Shopify,shopify.dev,shopify.dev,false
+woocommerce,42,Ecommerce,WooCommerce,woocommerce.com/document/woocommerce-rest-api,woocommerce.com/document/woocommerce-rest-api,false
+bigcommerce,43,Ecommerce,BigCommerce,developer.bigcommerce.com,developer.bigcommerce.com,false
+salesforce-commerce-cloud,44,Ecommerce,Salesforce Commerce Cloud,developer.salesforce.com/docs/commerce,developer.salesforce.com/docs/commerce,false
+magento-adobe-commerce,45,Ecommerce,Magento (Adobe Commerce),developer.adobe.com/commerce,developer.adobe.com/commerce,false
+squarespace,46,Ecommerce,Squarespace,developers.squarespace.com,developers.squarespace.com,false
+ecwid,47,Ecommerce,Ecwid,api-docs.ecwid.com,api-docs.ecwid.com,false
+gumroad,48,Ecommerce,Gumroad,gumroad.com/api,gumroad.com/api,false
+amazon-selling-partner,49,Ecommerce,Amazon Selling Partner,developer-docs.amazon.com/sp-api,developer-docs.amazon.com/sp-api,false
+fanbasis,50,Ecommerce,fanbasis,fanbasis.com,fanbasis.com,false
+dataforseo,51,"Data, SEO and Scraping",DataForSEO,docs.dataforseo.com,docs.dataforseo.com,false
+se-ranking,52,"Data, SEO and Scraping",SE Ranking,seranking.com/api,seranking.com/api,false
+ahrefs,53,"Data, SEO and Scraping",Ahrefs,ahrefs.com/api,ahrefs.com/api,false
+mrscraper,54,"Data, SEO and Scraping",MrScraper,docs.mrscraper.com,docs.mrscraper.com,false
+apify,55,"Data, SEO and Scraping",Apify,docs.apify.com,docs.apify.com,false
+firecrawl,56,"Data, SEO and Scraping",Firecrawl,firecrawl.dev,firecrawl.dev,false
+bright-data,57,"Data, SEO and Scraping",Bright Data,brightdata.com,brightdata.com,false
+sherlock,58,"Data, SEO and Scraping",Sherlock,github.com/sherlock-project/sherlock,github.com/sherlock-project/sherlock,false
+waterfall-io,59,"Data, SEO and Scraping",Waterfall.io,waterfall.io (contact/company intel),waterfall.io,false
+clay,60,"Data, SEO and Scraping",Clay,clay.com,clay.com,false
+github,61,"Developer, Infra and Data Platforms",GitHub,docs.github.com/rest,docs.github.com/rest,false
+vercel,62,"Developer, Infra and Data Platforms",Vercel,vercel.com/docs/rest-api,vercel.com/docs/rest-api,false
+netlify,63,"Developer, Infra and Data Platforms",Netlify,docs.netlify.com/api,docs.netlify.com/api,false
+cloudflare,64,"Developer, Infra and Data Platforms",Cloudflare,developers.cloudflare.com/api,developers.cloudflare.com/api,false
+supabase,65,"Developer, Infra and Data Platforms",Supabase,supabase.com/docs,supabase.com/docs,false
+neo4j,66,"Developer, Infra and Data Platforms",Neo4j,neo4j.com/docs/api,neo4j.com/docs/api,false
+snowflake,67,"Developer, Infra and Data Platforms",Snowflake,docs.snowflake.com,docs.snowflake.com,false
+mongodb-atlas,68,"Developer, Infra and Data Platforms",MongoDB Atlas,mongodb.com/docs/atlas/api,mongodb.com/docs/atlas/api,false
+datadog,69,"Developer, Infra and Data Platforms",Datadog,docs.datadoghq.com/api,docs.datadoghq.com/api,false
+sentry,70,"Developer, Infra and Data Platforms",Sentry,docs.sentry.io/api,docs.sentry.io/api,false
+notion,71,Productivity and Project Management,Notion,developers.notion.com,developers.notion.com,false
+airtable,72,Productivity and Project Management,Airtable,airtable.com/developers,airtable.com/developers,false
+linear,73,Productivity and Project Management,Linear,developers.linear.app,developers.linear.app,false
+jira,74,Productivity and Project Management,Jira,developer.atlassian.com,developer.atlassian.com,false
+asana,75,Productivity and Project Management,Asana,developers.asana.com,developers.asana.com,false
+monday-com,76,Productivity and Project Management,Monday.com,developer.monday.com,developer.monday.com,false
+clickup,77,Productivity and Project Management,ClickUp,clickup.com/api,clickup.com/api,false
+coda,78,Productivity and Project Management,Coda,coda.io/developers,coda.io/developers,false
+smartsheet,79,Productivity and Project Management,Smartsheet,smartsheet.com/developers,smartsheet.com/developers,false
+harvest,80,Productivity and Project Management,Harvest,harvestapp.com (help.getharvest.com/api-v2),help.getharvest.com/api-v2,false
+stripe,81,Finance and Fintech,Stripe,stripe.com/docs/api,stripe.com/docs/api,false
+plaid,82,Finance and Fintech,Plaid,plaid.com/docs,plaid.com/docs,false
+binance,83,Finance and Fintech,Binance,binance-docs.github.io,binance-docs.github.io,false
+paygent-connect,84,Finance and Fintech,Paygent Connect,paygent (NMI-powered),,false
+ipayx,85,Finance and Fintech,iPayX,ipayx.ai/docs,ipayx.ai/docs,false
+quickbooks,86,Finance and Fintech,QuickBooks,developer.intuit.com,developer.intuit.com,false
+xero,87,Finance and Fintech,Xero,developer.xero.com,developer.xero.com,false
+brex,88,Finance and Fintech,Brex,developer.brex.com,developer.brex.com,false
+ramp,89,Finance and Fintech,Ramp,docs.ramp.com,docs.ramp.com,false
+pitchbook,90,Finance and Fintech,PitchBook,pitchbook.com (research API),pitchbook.com,false
+notebooklm,91,"AI, Research and Media-native",NotebookLM,cloud.google.com/gemini (Enterprise API),cloud.google.com/gemini,false
+otter-ai,92,"AI, Research and Media-native",Otter AI,help.otter.ai (MCP server),help.otter.ai,false
+fathom,93,"AI, Research and Media-native",Fathom,fathom.video,fathom.video,false
+consensus,94,"AI, Research and Media-native",Consensus,consensus.app (OAuth requested),consensus.app,false
+reducto,95,"AI, Research and Media-native",Reducto,reducto.ai (document parsing),reducto.ai,false
+devin,96,"AI, Research and Media-native",Devin,docs.devin.ai (MCP),docs.devin.ai,false
+higgsfield,97,"AI, Research and Media-native",higgsfield,higgsfield.ai/cli (content suite),higgsfield.ai/cli,false
+mermaid-cli,98,"AI, Research and Media-native",Mermaid CLI,github.com/mermaid-js/mermaid-cli,github.com/mermaid-js/mermaid-cli,false
+youtube-transcript,99,"AI, Research and Media-native",YouTube Transcript,transcriptapi.com,transcriptapi.com,false
+grain,100,"AI, Research and Media-native",Grain,grain.com (meeting notes),grain.com,false

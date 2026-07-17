@@ -1,0 +1,243 @@
+{
+  "app_id": "close",
+  "app_name": "Close",
+  "domain": "close.com",
+  "category": null,
+  "description": "It combines calling, email, SMS, pipeline management, reporting, and an AI sales agent named Chloe into a single platform.",
+  "authentication": {
+    "methods": [
+      "api_key",
+      "basic_auth",
+      "oauth2"
+    ],
+    "notes": null,
+    "field_confidence": "high",
+    "evidence_ids": [
+      "evidence-002"
+    ]
+  },
+  "credential_access": {
+    "independent_developer_access": "unknown",
+    "existing_customer_access": "unknown",
+    "multi_tenant_integration_access": "unknown",
+    "free_or_trial_notes": null,
+    "paid_plan_notes": null,
+    "admin_or_approval_notes": null,
+    "field_confidence": "low",
+    "evidence_ids": []
+  },
+  "api_surface": {
+    "documented_public_api": true,
+    "rest": true,
+    "graphql": null,
+    "webhooks": true,
+    "websocket": null,
+    "sdk_available": null,
+    "read_operations": true,
+    "write_operations": true,
+    "bulk_operations": null,
+    "api_breadth": "broad",
+    "important_resources": [],
+    "limitations": [],
+    "field_confidence": "high",
+    "evidence_ids": [
+      "evidence-003",
+      "evidence-004",
+      "evidence-005",
+      "evidence-006",
+      "evidence-007",
+      "evidence-008",
+      "evidence-009"
+    ]
+  },
+  "mcp": {
+    "status": "unknown",
+    "official_url": null,
+    "transport_or_hosting_notes": null,
+    "capabilities": [],
+    "limitations": [],
+    "field_confidence": "low",
+    "evidence_ids": []
+  },
+  "buildability": {
+    "verdict": "unknown",
+    "main_blocker": null,
+    "secondary_blockers": [],
+    "single_workspace_buildable": null,
+    "public_multi_tenant_buildable": null,
+    "reasoning_summary": null,
+    "field_confidence": "low",
+    "evidence_ids": []
+  },
+  "evidence": [
+    {
+      "evidence_id": "evidence-001",
+      "field": "description",
+      "claim": "description is It combines calling, email, SMS, pipeline management, reporting, and an AI sales agent named Chloe into a single platform..",
+      "url": "https://close.com/?referrer=wordpress.com",
+      "page_title": "Close CRM | Sales CRM with Built-In AI Sales Agent",
+      "source_type": "official",
+      "excerpt": "It combines calling, email, SMS, pipeline management, reporting, and an AI sales agent named Chloe into a single platform.",
+      "retrieved_at": "2026-07-17T07:13:44.845090Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-002",
+      "field": "authentication",
+      "claim": "authentication_methods is ['api_key', 'basic_auth', 'oauth2'].",
+      "url": "https://developer.close.com/api/overview",
+      "page_title": "API Overview | Close | Developer API Documentation",
+      "source_type": "official",
+      "excerpt": "- API Keys — Best for scripts, internal tools, and server-side integrations.\nUse HTTP Basic Auth with your API key as the username and an empty password.",
+      "retrieved_at": "2026-07-17T07:13:44.845090Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-003",
+      "field": "api_surface.documented_public_api",
+      "claim": "documented_api is supported.",
+      "url": "https://developer.close.com/api/overview",
+      "page_title": "API Overview | Close | Developer API Documentation",
+      "source_type": "official",
+      "excerpt": "We publish an OpenAPI spec at:",
+      "retrieved_at": "2026-07-17T07:13:44.845090Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-004",
+      "field": "api_surface.rest",
+      "claim": "rest is supported.",
+      "url": "https://developer.close.com/api/overview",
+      "page_title": "API Overview | Close | Developer API Documentation",
+      "source_type": "official",
+      "excerpt": "Close uses industry-standard REST conventions",
+      "retrieved_at": "2026-07-17T07:13:44.845090Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-005",
+      "field": "api_surface.read_operations",
+      "claim": "read_operations is supported.",
+      "url": "https://developer.close.com/api/overview",
+      "page_title": "API Overview | Close | Developer API Documentation",
+      "source_type": "official",
+      "excerpt": "List endpoints support pagination via `_skip`/`_limit`",
+      "retrieved_at": "2026-07-17T07:13:44.845090Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-006",
+      "field": "api_surface.write_operations",
+      "claim": "write_operations is supported.",
+      "url": "https://developer.close.com/api/overview",
+      "page_title": "API Overview | Close | Developer API Documentation",
+      "source_type": "official",
+      "excerpt": "`PUT` requests behave as patches — send only the fields you want to update.",
+      "retrieved_at": "2026-07-17T07:13:44.845090Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-007",
+      "field": "api_surface.api_breadth",
+      "claim": "api_breadth is broad.",
+      "url": "https://developer.close.com/api/overview",
+      "page_title": "API Overview | Close | Developer API Documentation",
+      "source_type": "official",
+      "excerpt": "Close uses industry-standard REST conventions with predictable URL structures, standard HTTP methods, and JSON request/response bodies.",
+      "retrieved_at": "2026-07-17T07:13:44.845090Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-008",
+      "field": "api_surface.webhooks",
+      "claim": "webhooks_events is supported.",
+      "url": "https://developer.close.com/api/overview",
+      "page_title": "API Overview | Close | Developer API Documentation",
+      "source_type": "official",
+      "excerpt": "Webhooks — Subscribe to events",
+      "retrieved_at": "2026-07-17T07:13:44.845090Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    },
+    {
+      "evidence_id": "evidence-009",
+      "field": "api_surface.webhooks",
+      "claim": "webhooks_events is supported.",
+      "url": "https://developer.close.com/resources/webhook-subscriptions",
+      "page_title": "Webhook Subscriptions - Close API Documentation",
+      "source_type": "official",
+      "excerpt": "Webhook Subscriptions - Close API Documentation",
+      "retrieved_at": "2026-07-17T07:13:44.845090Z",
+      "published_or_updated_at": null,
+      "supports_claim": true,
+      "notes": null
+    }
+  ],
+  "unresolved_questions": [
+    "category: unresolved",
+    "independent_developer_access: unresolved",
+    "existing_customer_access: unresolved",
+    "multi_tenant_integration_access: unresolved",
+    "graphql: unresolved",
+    "bulk_operations: unresolved",
+    "websocket: unresolved",
+    "sdk_available: unresolved",
+    "mcp_status: unresolved",
+    "Buildability remains unresolved from available evidence"
+  ],
+  "verification": {
+    "status": "researcher_complete",
+    "researcher_completed_at": null,
+    "verifier_completed_at": null,
+    "human_reviewed_at": null,
+    "researcher_model": null,
+    "verifier_model": null,
+    "researcher_verifier_disagreements": [],
+    "human_corrections": [],
+    "human_failure_types": {},
+    "researcher_policy_version": "tolerant_core_supplementary_v3",
+    "finalized_by": null,
+    "human_reviewed": false,
+    "audit_status": "not_sampled",
+    "overall_confidence": "low"
+  },
+  "timestamps": {
+    "created_at": "2026-07-17T07:13:44.845090Z",
+    "updated_at": "2026-07-17T07:13:44.845090Z"
+  },
+  "verification_pass_2": {
+    "execution": "targeted_attempt",
+    "fields_reused": [
+      "api_breadth"
+    ],
+    "fields_researched": [
+      "authentication",
+      "independent_developer_access",
+      "independent_developer_access",
+      "buildability_verdict"
+    ],
+    "fields_corrected": [],
+    "fields_left_unresolved": [],
+    "old_values_preserved": true,
+    "new_evidence_ids": [],
+    "composio_calls": 1,
+    "openrouter_calls": 0,
+    "operational_failure": true,
+    "failure": "Composio connection unavailable"
+  }
+}

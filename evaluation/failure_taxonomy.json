@@ -1,0 +1,108 @@
+[
+  {
+    "failure_id": "unofficial_source_used",
+    "name": "Unofficial source used",
+    "description": "A conclusion relies on a source that is not controlled by the vendor.",
+    "severity": "high",
+    "recommended_system_fix": "Require official evidence for high-impact fields and label secondary evidence."
+  },
+  {
+    "failure_id": "credential_access_inferred_without_evidence",
+    "name": "Credential access inferred without evidence",
+    "description": "Credential availability was classified without credential-registration evidence.",
+    "severity": "critical",
+    "recommended_system_fix": "Research credential creation separately and escalate unsupported classifications."
+  },
+  {
+    "failure_id": "api_existence_confused_with_self_serve_access",
+    "name": "API existence confused with self-serve access",
+    "description": "Public API documentation was treated as proof that credentials are obtainable.",
+    "severity": "critical",
+    "recommended_system_fix": "Require distinct evidence for API existence and credential access."
+  },
+  {
+    "failure_id": "oauth_support_confused_with_oauth_client_registration",
+    "name": "OAuth support confused with OAuth client registration",
+    "description": "OAuth support was treated as proof that developers can register clients.",
+    "severity": "critical",
+    "recommended_system_fix": "Require evidence describing OAuth app or client registration."
+  },
+  {
+    "failure_id": "admin_requirement_missed",
+    "name": "Admin requirement missed",
+    "description": "A workspace or organization administrator requirement was omitted.",
+    "severity": "high",
+    "recommended_system_fix": "Search official setup guides for required roles and permissions."
+  },
+  {
+    "failure_id": "paid_plan_requirement_missed",
+    "name": "Paid plan requirement missed",
+    "description": "A paid tier required for API or credential access was omitted.",
+    "severity": "high",
+    "recommended_system_fix": "Cross-check API documentation against current official pricing."
+  },
+  {
+    "failure_id": "partner_or_sales_gate_missed",
+    "name": "Partner or sales gate missed",
+    "description": "Partner enrollment, vendor approval, or sales contact was not recorded.",
+    "severity": "critical",
+    "recommended_system_fix": "Search partner and integration publication requirements separately."
+  },
+  {
+    "failure_id": "old_or_deprecated_documentation",
+    "name": "Old or deprecated documentation",
+    "description": "A conclusion relies on superseded documentation.",
+    "severity": "high",
+    "recommended_system_fix": "Capture update dates and check official deprecation notices."
+  },
+  {
+    "failure_id": "official_mcp_confused_with_community_mcp",
+    "name": "Official MCP confused with community MCP",
+    "description": "A community MCP server was labeled as vendor-official.",
+    "severity": "high",
+    "recommended_system_fix": "Verify ownership using vendor domains or official GitHub organizations."
+  },
+  {
+    "failure_id": "none_found_converted_to_not_supported",
+    "name": "None found converted to not supported",
+    "description": "Failure to find evidence was converted into an explicit non-support claim.",
+    "severity": "high",
+    "recommended_system_fix": "Keep none_found and not_supported distinct and require explicit proof."
+  },
+  {
+    "failure_id": "pricing_and_documentation_conflict",
+    "name": "Pricing and documentation conflict",
+    "description": "Official pricing and developer documentation imply incompatible access conditions.",
+    "severity": "critical",
+    "recommended_system_fix": "Preserve both sources and route the contradiction to human review."
+  },
+  {
+    "failure_id": "login_gated_evidence",
+    "name": "Login-gated evidence",
+    "description": "A source cannot be independently reviewed without an authenticated account.",
+    "severity": "medium",
+    "recommended_system_fix": "Flag access restrictions and seek a reviewable official source."
+  },
+  {
+    "failure_id": "insufficient_api_breadth_analysis",
+    "name": "Insufficient API breadth analysis",
+    "description": "API breadth was classified without reviewing important resources and operations.",
+    "severity": "medium",
+    "recommended_system_fix": "Record read, write, bulk, webhook, and resource coverage independently."
+  },
+  {
+    "failure_id": "researcher_verifier_agreement_without_evidence",
+    "name": "Researcher-verifier agreement without evidence",
+    "description": "Matching outputs were accepted despite absent or inadequate supporting evidence.",
+    "severity": "critical",
+    "recommended_system_fix": "Run evidence sufficiency checks independently of value agreement."
+  },
+  {
+    "failure_id": "unsupported_buildability_verdict",
+    "name": "Unsupported buildability verdict",
+    "description": "The final buildability verdict introduces a conclusion not supported by prior fields.",
+    "severity": "critical",
+    "recommended_system_fix": "Derive reasoning only from evidence-backed structured fields."
+  }
+]
+

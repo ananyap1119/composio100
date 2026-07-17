@@ -1,0 +1,29 @@
+version: 1
+scope:
+  immutable_source_inventory: provided_apps.csv
+  fixed_inventory: data/apps.csv
+  calibration_apps: config/calibration_apps.json
+source_policy:
+  - Prefer official documentation.
+  - Prefer official developer portals and official GitHub organizations.
+  - Secondary evidence may assist discovery but cannot independently prove a high-impact claim.
+research_rules:
+  - Search authentication and credential registration separately.
+  - Search pricing and API access separately.
+  - Search MCP using official sources first.
+  - Do not convert "not found" into "does not exist."
+  - Do not infer self-serve access from public API documentation.
+  - Do not infer free access from the existence of signup.
+  - Do not infer multi-tenant OAuth access from support for OAuth.
+  - Record uncertainty honestly.
+  - Store retrieval timestamps.
+  - Preserve conflicting evidence.
+  - Escalate unresolved contradictions.
+  - Do not fabricate excerpts.
+  - Do not fabricate source URLs.
+high_impact_fields:
+  - credential_access
+  - buildability
+  - authentication
+  - api_surface.documented_public_api
+  - mcp.status

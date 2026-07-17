@@ -1,0 +1,9 @@
+{
+  "supported": 23,
+  "incorrect": 3,
+  "missed_evidence": 23,
+  "correctly_uncertain": 1,
+  "overall_correctness": 0.48,
+  "concrete_precision": 0.885,
+  "verdict_accuracy": 0.4
+}

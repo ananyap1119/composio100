@@ -1,0 +1,20 @@
+{
+  "app_id": "jira",
+  "locked_fields": [
+    "existing_customer_admin_access"
+  ],
+  "fields_to_research": [
+    "authentication",
+    "existing_customer_admin_access",
+    "buildability_verdict"
+  ],
+  "fields_to_correct": [
+    "independent_developer_access"
+  ],
+  "fields_left_unresolved": [],
+  "reason": {
+    "mode": "offline_field_level_resume",
+    "new_composio_calls": 0,
+    "new_openrouter_calls": 0
+  }
+}
