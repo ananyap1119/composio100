@@ -57,7 +57,11 @@ No post-fix automated accuracy is claimed: eight targeted Composio attempts fail
 
 ## Verification Method
 
-Salesforce calibration, 100-app first pass, stratified ten-app sample, 50 manual claim checks, failure taxonomy, browser evidence-link validation, human-reviewed overlay, and blocked automated rerun.
+Salesforce calibration, 100-app first pass, stratified ten-app sample, 50 manual claim checks, failure taxonomy, human-reviewed overlay, and blocked automated rerun.
+
+Browser evidence-link validation
+
+Not completed. Browser automation was unavailable in the execution environment. The ten-app semantic verification was performed manually against official documentation.
 
 ## Gated Integration Findings
 

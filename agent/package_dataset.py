@@ -90,6 +90,9 @@ def main() -> None:
     # Replace the legacy prototype with the readable presentation generator.
     write_html(rows, ROOT / "final_case_study.html")
     write_case_study(rows, ROOT / "final_case_study.html")
+    site = ROOT / "site" / "index.html"
+    site.parent.mkdir(exist_ok=True)
+    site.write_text((ROOT / "final_case_study.html").read_text(encoding="utf-8"), encoding="utf-8")
 
 
 if __name__ == "__main__":
