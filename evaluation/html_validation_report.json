@@ -9,6 +9,19 @@
     "build_after_app_review": 17,
     "limited_toolkit": 1
   },
+  "headline_verdicts": {
+    "build_now": 29,
+    "build_after_app_review": 17,
+    "build_with_customer_credentials": 7,
+    "limited_toolkit": 1,
+    "require_vendor_or_customer_confirmation": 46
+  },
+  "pattern_map_counts": {
+    "Broad API + self-serve access": 21,
+    "Broad API + gated access": 31,
+    "Limited API + self-serve access": 0,
+    "Limited API + gated access": 2
+  },
   "machine_final": 54,
   "review_required": 46,
   "evidence_links": 1278,
@@ -20,5 +33,7 @@
     "review",
     "category"
   ],
-  "expandable_details": true
+  "expandable_details": true,
+  "overlapping_metrics_labelled": true,
+  "mcp_top_level_unknown_metric": false
 }

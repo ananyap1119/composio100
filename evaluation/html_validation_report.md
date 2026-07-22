@@ -4,9 +4,13 @@
 - **Records Rendered:** 100
 - **Unique App Ids:** 100
 - **Verdict Counts:** {'build_now': 29, 'build_with_customer_credentials': 7, 'unknown': 46, 'build_after_app_review': 17, 'limited_toolkit': 1}
+- **Headline Verdicts:** {'build_now': 29, 'build_after_app_review': 17, 'build_with_customer_credentials': 7, 'limited_toolkit': 1, 'require_vendor_or_customer_confirmation': 46}
+- **Pattern Map Counts:** {'Broad API + self-serve access': 21, 'Broad API + gated access': 31, 'Limited API + self-serve access': 0, 'Limited API + gated access': 2}
 - **Machine Final:** 54
 - **Review Required:** 46
 - **Evidence Links:** 1278
 - **Unsupported Empty Claims:** 0
 - **Filters:** ['search', 'verdict', 'confidence', 'review', 'category']
 - **Expandable Details:** True
+- **Overlapping Metrics Labelled:** True
+- **Mcp Top Level Unknown Metric:** False
