@@ -1,9 +1,0 @@
-{
-  "seed": 20260717,
-  "apps": [
-    "firecrawl",
-    "pinterest",
-    "supabase"
-  ],
-  "status": "pending_manual_check"
-}

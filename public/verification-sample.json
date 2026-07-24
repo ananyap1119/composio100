@@ -1,0 +1,51 @@
+[
+  {
+    "app": "Salesforce",
+    "claim": "OAuth 2.0; developer testing is self-serve",
+    "result": "Pass",
+    "note": "Official quickstart provides Developer Edition and an OAuth setup path.",
+    "source": "https://developer.salesforce.com/docs/platform/connect-rest-api/guide/quickstart.html"
+  },
+  {
+    "app": "GitHub",
+    "claim": "Tokens/OAuth; broad public REST surface",
+    "result": "Pass",
+    "note": "Official REST authentication docs confirm app and token paths.",
+    "source": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api"
+  },
+  {
+    "app": "Notion",
+    "claim": "Public integrations use OAuth 2.0",
+    "result": "Pass",
+    "note": "Official authorization guide separates public OAuth from internal tokens.",
+    "source": "https://developers.notion.com/guides/get-started/authorization"
+  },
+  {
+    "app": "Stripe",
+    "claim": "API keys are self-serve; OAuth exists for Connect",
+    "result": "Pass",
+    "note": "Official key and Connect references confirm both authentication modes.",
+    "source": "https://docs.stripe.com/keys"
+  },
+  {
+    "app": "LinkedIn Ads",
+    "claim": "OAuth 2.0 plus approval-gated marketing access",
+    "result": "Pass",
+    "note": "Official access-tier docs require an application and reserve upgrades.",
+    "source": "https://learn.microsoft.com/en-us/linkedin/marketing/integrations/marketing-tiers"
+  },
+  {
+    "app": "Google Ads",
+    "claim": "Production credentials are self-serve",
+    "result": "Corrected",
+    "note": "The first pass missed developer-token review and access-level approval.",
+    "source": "https://developers.google.com/google-ads/api/docs/api-policy/developer-token"
+  },
+  {
+    "app": "NotebookLM",
+    "claim": "No agent-callable API exists",
+    "result": "Corrected",
+    "note": "Enterprise notebook-management APIs now exist in preview; licensing and IAM gate access.",
+    "source": "https://cloud.google.com/gemini/enterprise/notebooklm-enterprise/docs/api-notebooks"
+  }
+]

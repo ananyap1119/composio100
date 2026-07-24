@@ -1,76 +1,133 @@
-# Toolkit Readiness Research Agent
+# Atlas — API Readiness Index
 
-This submission researches 100 applications for authentication, credential access, API capability and MCP availability. It retains official evidence, derives deterministic verdicts, and routes unsupported claims to review. Salesforce was the calibration case; a stratified ten-app manual official-documentation audit was completed, while the attempted automated post-fix rerun was blocked by local outbound connectivity.
+Atlas is a single-page product-ops case study that evaluates the authentication,
+access model, API surface, MCP availability, and agent buildability of 100 apps
+across 10 categories.
 
-## Live Case Study
+Live product: https://atlas-api-readiness.ananyap1119.chatgpt.site
 
-Repository: https://github.com/ananyap1119/composio100
+## What is included
 
-Static package: `site/index.html`
+- A searchable and filterable 100-app findings matrix.
+- App-specific descriptions, authentication, access nuance, API breadth, MCP
+  signal, buildability verdict, blocker, and a first-party evidence trail.
+- Quantified category and portfolio-level patterns.
+- A transparent research agent that replays the first-party sources for all 100
+  rows and routes conflicts or low-confidence pages to a human.
+- A seven-app, risk-weighted verification sample with five first-pass hits and
+  two documented corrections.
+- Downloadable research data, verification data, interview Q&A, and a
+  line-by-line assignment audit.
 
-## Repository Outputs
+## Run the product
 
-- `data/final_dataset.json` — consolidated 100-app dataset.
-- `final_case_study.html` — standalone case study.
-- `evaluation/manual_audit_results.json` — 50-claim manual audit.
-- `evaluation/audit_failure_taxonomy.json` — observed failure categories.
-- `evaluation/human_verified_overlay.json` — presentation-only human overlay.
-- `evaluation/browser_verification_results.json` — browser evidence-link validation status.
-- `evaluation/verification_pass_1/` and `evaluation/verification_pass_2/` — preserved first-pass and attempted second-pass history.
-
-## Architecture
-
-Inventory → Composio retrieval → OpenRouter extraction → Python normalization → evidence validation → deterministic verdict → manual review.
-
-Official documentation is required for verdict-driving claims. Model output is never evidence. Unknown remains unknown. Official and community MCP are separate; developer creation, customer authorization, and public distribution are separate dimensions.
-
-## Running One App
+Prerequisites: Node.js 22.13 or newer.
 
 ```bash
-python -m pip install -e ".[dev]"
-python -m agent.cli research --app-id salesforce --resume-latest
+npm install
+npm run dev
 ```
 
-## Environment Variables
+Then open the local URL printed by the development server.
 
-- `COMPOSIO_API_KEY`
-- `OPENROUTER_API_KEY`
-- `RESEARCH_PROVIDER`
-- `RESEARCH_MODEL`
-
-## Testing
+Production validation:
 
 ```bash
-python -m pytest
-python -m ruff check .
+npm run lint
+npm test
 ```
 
-Current result: 43 tests passing; Ruff clean.
+`npm test` creates the production build before checking its server-rendered HTML
+and all required research artifacts.
 
-## Accuracy Results
+## Run the research agent
 
-Agent first pass: overall correctness 48.0%, concrete-claim precision 88.5%, verdict accuracy 40.0%.
+The default command checks all 100 rows in `public/research-set.json`:
 
-The audited finalized subset upheld 3 of 3 verdicts, with 14 of 15 claims supported and one terminology error. The human-reviewed sample produced 9 of 10 concrete scoped verdicts, with one partly unresolved; 49 claims were resolved and one was correctly preserved as uncertain.
+```bash
+node public/research-agent.mjs > research-output.json
+```
 
-No post-fix automated accuracy is claimed: eight targeted Composio attempts failed before retrieval, DNS succeeded, Windows returned WinError 10013, and zero OpenRouter calls ran.
+Useful controls:
 
-## Verification Method
+```bash
+node public/research-agent.mjs --limit 10 --concurrency 4 --timeout 15000
+node public/research-agent.mjs --input another-set.json > results.json
+```
 
-Salesforce calibration, 100-app first pass, stratified ten-app sample, 50 manual claim checks, failure taxonomy, human-reviewed overlay, and blocked automated rerun.
+The input is an array of objects with these fields:
 
-Browser evidence-link validation
+```json
+{
+  "id": 61,
+  "name": "GitHub",
+  "category": "Developer & Infra",
+  "description": "Code collaboration platform for repositories, issues, pull requests, Actions, and security.",
+  "auth": "OAuth 2.0 / token",
+  "access": "Self-serve",
+  "surface": "Broad REST + GraphQL",
+  "mcp": true,
+  "verdict": "Ready",
+  "blocker": "—",
+  "evidence": "https://docs.github.com/en/rest"
+}
+```
 
-Not completed. Browser automation was unavailable in the execution environment. The ten-app semantic verification was performed manually against official documentation.
+The output records source reachability, observed auth/access/surface signals,
+short source excerpts, conflicts with the curated claim, confidence, and whether
+human review is required. The agent does not claim to execute protected
+endpoints and does not invent evidence when a page cannot be read.
 
-## Gated Integration Findings
+## Research workflow
 
-Enterprise, marketplace, administrator and vendor-approval requirements are valid findings. Close, Front, Shopify, Jira and Otter AI retain scoped paths rather than being treated as generic failures.
+1. **Define the rubric.** Ready means a documented callable surface plus
+   developer-obtainable credentials. Constrained means the surface exists but a
+   plan, review, tenant admin, license, or partnership is required. Blocked means
+   no usable public callable surface was found.
+2. **Discover first-party evidence.** Each row has a first-party documentation or
+   vendor source.
+3. **Extract and normalize.** The script searches the source text for explicit
+   authentication, access, and interface signals.
+4. **Challenge the claim.** Observed signals are compared with the curated row;
+   contradictions and weak evidence are queued for review.
+5. **Verify high-risk rows.** A browser replay and human reading check gated,
+   ambiguous, and time-sensitive claims.
+6. **Record corrections.** Google Ads moved from self-serve to gated because a
+   developer token is reviewed. NotebookLM moved from blocked to constrained
+   because an Enterprise API now exists in preview behind license and IAM gates.
 
-## Limitations
+The first pass got five of seven sampled rows correct (71%). After the two
+corrections, that same sample was seven of seven. This is not a claim that all
+100 rows have 100% accuracy.
 
-Only ten apps were manually audited; Salesforce is calibration; the finalized 3/3 check is a small sample; the remaining 90 apps were not manually verified; portals may be login or payment gated; documentation changes; browser link validation is not semantic claim verification; automated post-fix evaluation could not complete.
+## Agent versus human
 
-## Project Status
+The agent fetches pages, extracts transparent signals, compares claims, scores
+confidence, and queues uncertain rows. The human owns the rubric, interprets
+commercial and policy nuance, checks dynamic or inaccessible documentation, and
+approves corrections. Paid accounts are intentionally unnecessary: a
+payment/approval gate is itself a finding.
 
-100 apps processed · 18 agent-finalized · 24 decision-ready after manual review · 76 review-required · 43 tests passing · Ruff clean · post-fix rerun blocked.
+## Files
+
+- `app/page.tsx` — the complete interactive case study.
+- `app/globals.css` — minimal Composio-inspired visual system.
+- `public/research-set.json` — normalized 100-app input.
+- `public/research-agent.mjs` — reproducible source-check agent.
+- `public/verification-sample.json` — seven verified claims and outcomes.
+- `public/interview-questionnaire.md` — interview preparation with precise answers.
+- `public/assignment-compliance-audit.md` — requirement-by-requirement audit.
+- `tests/rendered-html.test.mjs` — production-render and artifact checks.
+
+## Known limitations
+
+- The seven-row verification sample is risk-weighted, not statistically
+  representative of the whole set.
+- Documentation and access policies change; evidence should be date-stamped and
+  periodically replayed.
+- Regex-based extraction can miss JavaScript-rendered, vague, regional, or
+  context-dependent documentation.
+- MCP means that a documented MCP surface was found; the matrix does not imply
+  that every server is first-party or equally production-ready.
+- Public documentation can prove the credential path and surface, but not a
+  protected call without an account. The site reports this distinction.
